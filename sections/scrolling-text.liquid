@@ -1,0 +1,151 @@
+{%- liquid
+  assign speed = section.settings.speed
+  assign direction = section.settings.direction
+  assign font_size = section.settings.font_size
+  assign bg_color = section.settings.bg_color
+  assign text_color = section.settings.text_color
+-%}
+
+{%- style -%}
+  .scrolling-text-{{ section.id }} {
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+    padding: 1.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .scrolling-text-{{ section.id }} .marquee {
+    display: inline-flex;
+    align-items: center;
+  }
+  .scrolling-text-{{ section.id }} .marquee-content {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-heading-family);
+    font-weight: 600;
+    font-size: {{ font_size }}px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .scrolling-text-{{ section.id }} .marquee-item {
+    padding: 0 4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .scrolling-text-{{ section.id }} .bullet-point {
+    width: 8px;
+    height: 8px;
+    background-color: {{ text_color }};
+    border-radius: 50%;
+    display: inline-block;
+  }
+{%- endstyle -%}
+
+<div class="scrolling-text-{{ section.id }}">
+  <div class="marquee">
+    <div class="marquee-content animation-marquee {{ direction }}" style="--speed: {{ speed }}s;">
+      {%- for i in (1..10) -%}
+        {%- for block in section.blocks -%}
+          <div class="marquee-item" {{ block.shopify_attributes }}>
+            <span>{{ block.settings.text }}</span>
+            <span class="bullet-point"></span>
+          </div>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scrolling Text (Marquee)",
+  "settings": [
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 5,
+      "max": 60,
+      "step": 1,
+      "default": 20,
+      "unit": "s",
+      "label": "Scroll Speed"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left to Right"
+        },
+        {
+          "value": "right",
+          "label": "Right to Left"
+        }
+      ],
+      "default": "left",
+      "label": "Direction"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "default": 16,
+      "unit": "px",
+      "label": "Font Size"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "default": "#f5f5f5",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#111111",
+      "label": "Text Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_item",
+      "name": "Text Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Exclusive Seasonal Picks",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling Text (Marquee)",
+      "blocks": [
+        {
+          "type": "text_item",
+          "settings": {
+            "text": "Exclusive Seasonal Picks"
+          }
+        },
+        {
+          "type": "text_item",
+          "settings": {
+            "text": "Express Your True Self"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

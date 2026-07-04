@@ -1,0 +1,193 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "heading": "Online Exclusive",
+            "subheading": "Sweater Collection",
+            "button_label": "Shop Collection",
+            "link": "shopify://collections",
+            "box_align": "bottom-left"
+          }
+        },
+        "slide_2": {
+          "type": "slide",
+          "settings": {
+            "heading": "Super Comfort",
+            "subheading": "Season Collection",
+            "button_label": "Shop Collection",
+            "link": "shopify://collections",
+            "box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_2"
+      ],
+      "settings": {
+        "slide_height": "large",
+        "slider_visual_navigation": "dots",
+        "auto_rotate": false
+      }
+    },
+    "collection_list": {
+      "type": "collection-list",
+      "settings": {
+        "title": "Shop by Category",
+        "columns_desktop": 4,
+        "enable_circular_layout": true
+      }
+    },
+    "featured_collection_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "show_secondary_image": true
+      }
+    },
+    "promo_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Outfit Ideas of the Week",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore Looks"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "show_text_box": false
+      }
+    },
+    "featured_collection_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Trending Now",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "show_secondary_image": true
+      }
+    },
+    "testimonials": {
+      "type": "multicolumn",
+      "blocks": {
+        "test_1": {
+          "type": "column",
+          "settings": {
+            "title": "Sarah M.",
+            "text": "<p>\"Outstanding quality and incredibly fast shipping. Will absolutely purchase again!\"</p>"
+          }
+        },
+        "test_2": {
+          "type": "column",
+          "settings": {
+            "title": "Emma L.",
+            "text": "<p>\"The customer support was extremely helpful and the design of the clothes fits perfectly.\"</p>"
+          }
+        }
+      },
+      "block_order": [
+        "test_1",
+        "test_2"
+      ],
+      "settings": {
+        "title": "What Our Customers Say",
+        "columns_desktop": 2,
+        "column_alignment": "center"
+      }
+    },
+    "icon_box": {
+      "type": "multicolumn",
+      "blocks": {
+        "box_1": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Free shipping on all orders over $150</p>"
+          }
+        },
+        "box_2": {
+          "type": "column",
+          "settings": {
+            "title": "Free Returns",
+            "text": "<p>Free returns within 15 days of purchase</p>"
+          }
+        },
+        "box_3": {
+          "type": "column",
+          "settings": {
+            "title": "Support Online",
+            "text": "<p>We support customers 24/7 online</p>"
+          }
+        }
+      },
+      "block_order": [
+        "box_1",
+        "box_2",
+        "box_3"
+      ],
+      "settings": {
+        "columns_desktop": 3,
+        "column_alignment": "center"
+      }
+    },
+    "scrolling_text": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_1": {
+          "type": "text_item",
+          "settings": {
+            "text": "Exclusive Seasonal Picks"
+          }
+        },
+        "text_2": {
+          "type": "text_item",
+          "settings": {
+            "text": "Express Your True Self"
+          }
+        }
+      },
+      "block_order": [
+        "text_1",
+        "text_2"
+      ],
+      "settings": {
+        "speed": 20,
+        "direction": "left",
+        "font_size": 16,
+        "bg_color": "#f5f5f5",
+        "text_color": "#111111"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "collection_list",
+    "featured_collection_1",
+    "promo_banner",
+    "scrolling_text",
+    "featured_collection_2",
+    "testimonials",
+    "icon_box"
+  ]
+}
