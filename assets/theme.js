@@ -4969,7 +4969,7 @@ var BlsGlozinAdminLi = (function () {
     },
   };
 })();
-BlsGlozinAdminLi.init();
+// BlsGlozinAdminLi.init();
 
 class QuickView extends PopupBase {
   constructor() {
