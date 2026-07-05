@@ -27,10 +27,10 @@
         "cur_lang_aPwfT9": {
           "type": "cur_lang",
           "settings": {
-            "menu_link": "menu-topbar",
-            "show_currency": true,
+            "menu_link": "",
+            "show_currency": false,
             "show_language": false,
-            "show_our_store": true,
+            "show_our_store": false,
             "hidden_on_mobile": true
           }
         }
@@ -66,7 +66,6 @@
             "full_width": false,
             "promotion_position": "right",
             "promotion_image_width": 41,
-            "promotion_image_1": "shopify://shop_images/banner-home-new.jpg",
             "promotion_link_1": "https://themeforest.net/item/glozin-multipurpose-shopify-theme-os-20/53006461?s_rank=1",
             "promotion_link_newtab_1": true,
             "promotion_link_2": "",
@@ -119,7 +118,6 @@
             "full_width": true,
             "promotion_position": "right",
             "promotion_image_width": 34,
-            "promotion_image_1": "shopify://shop_images/fashion_1_58a22a64-af35-4c05-b131-55c66d56522d.jpg",
             "promotion_link_1": "shopify://collections/activewear",
             "promotion_link_newtab_1": true,
             "promotion_link_2": "",
@@ -137,9 +135,9 @@
         "section_width": "stretch_width",
         "color_scheme": "",
         "logo_position": "left",
-        "separator_line": "inner_page",
+        "separator_line": "homepage",
         "enable_login_popup": true,
-        "sticky_header_type": "always",
+        "sticky_header_type": "on-scroll-up",
         "sticky_header_mobile": true,
         "transparent_header": false,
         "transparent_mobile": false,
@@ -162,13 +160,7 @@
         "redirect_to_link": false,
         "menu_tab": "custom-collections",
         "collection_list": [
-          "hot-deals",
-          "best-seller",
-          "sweaters",
-          "t-shirts",
-          "dress",
-          "blazers",
-          "activewear"
+          "frontpage"
         ],
         "menu_mobile_color": "#ffffff",
         "menu_mobile_background": "#d0473e",
