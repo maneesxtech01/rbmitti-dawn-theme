@@ -144,6 +144,20 @@
               {%- endif -%}
             </div>
           </div>
+          <button-wishlist
+            tabindex="0"
+            class="product-item__button pointer product-item__button-wishlist tooltip relative btn-hover transition btn-hover transition btn-white rounded-50 p-0 shadow w-45 h-45 inline-flex content-center"
+            style="position: absolute; top: 10px; right: 10px; z-index: 10; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #fff; border: 1px solid #e5e5e5; cursor: pointer; color: #111;"
+            data-product-id="{{ card_product.id }}"
+            data-action="add"
+            data-tooltip-remove="Remove from wishlist"
+            data-tooltip-add="Add to wishlist"
+            data-tooltip-redirect="Go to wishlist"
+          >
+            <svg width="14" height="13" fill="none">
+              <use href="#icon-wishlist" />
+            </svg>
+          </button-wishlist>
         </div>
         <div class="card__content">
           <div class="card__information">

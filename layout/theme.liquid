@@ -412,6 +412,14 @@
     <script src="{{ 'motion.min.js' | asset_url }}" type="module" defer="defer"></script>
     <script src="{{ 'utils.js' | asset_url }}" defer="defer"></script>
     {%- render 'minicart' -%}
+    {%- liquid
+      sections 'overlay-group'
+      section 'mobile-navigation-bar'
+      section 'product-quickview'
+      section 'custom-colors'
+      section 'fake-order'
+    -%}
+    {% section 'top-search' %}
     {%- render 'scripts-tag' -%}
     {%- render 'sprite-svg' -%}
   </body>
