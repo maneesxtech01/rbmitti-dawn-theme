@@ -29,9 +29,41 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "top_bar_fkkWbx": {
+      "type": "top-bar",
+      "blocks": {
+        "announcement_FhdaWE": {
+          "type": "announcement",
+          "settings": {
+            "text": "Coats—every friday 75% Off . Shop Sale",
+            "link": ""
+          }
+        },
+        "announcement_Hf4GYR": {
+          "type": "announcement",
+          "settings": {
+            "text": "Coats—every friday 75% Off . Shop Sale",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_FhdaWE",
+        "announcement_Hf4GYR"
+      ],
+      "name": "Top Bar",
+      "settings": {
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "top_bar_fkkWbx"
   ]
 }
