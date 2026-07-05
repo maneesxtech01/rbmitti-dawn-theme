@@ -4160,6 +4160,61 @@ details-disclosure > details {
   font-family: var(--font-body-family);
 }
 
+/* Top Bar Slideshow Layout styling adjustments */
+.top-bar .announcement-bar-slider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.5rem !important;
+  margin: 0 auto;
+}
+
+.top-bar .slider-button {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 0.5rem !important;
+}
+
+.top-bar .slider-button svg {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+}
+
+.top-bar .announcement-bar__message {
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.05em;
+  font-family: var(--font-heading-family);
+  font-weight: 500;
+}
+
+.top-bar .slideshow__slide {
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.top-bar .list-social {
+  justify-content: flex-start !important;
+}
+
+.top-bar .list-social__item {
+  padding: 0 !important;
+}
+
+.top-bar .list-social__link svg {
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  fill: currentColor;
+}
+
+
 
 
 
