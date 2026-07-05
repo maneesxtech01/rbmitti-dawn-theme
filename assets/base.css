@@ -4216,6 +4216,62 @@ details-disclosure > details {
   fill: currentColor;
 }
 
+/* Navigation HOT badge */
+.menu-badge--hot {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 0.2rem 0.5rem !important;
+  border-radius: 3px !important;
+  position: absolute !important;
+  top: -1.8rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.menu-badge--hot::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -3px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border-width: 3px 3px 0 !important;
+  border-style: solid !important;
+  border-color: var(--color-primary) transparent transparent !important;
+}
+
+/* Align inline menu items relative positioning for badges */
+.header__inline-menu .header__menu-item span {
+  position: relative !important;
+}
+
+/* Header wishlist and cart bubble custom styles */
+.header__icon--wishlist,
+.header__icon--cart {
+  position: relative !important;
+}
+
+.cart-count-bubble {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  border-radius: 50% !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 0.8rem !important;
+  right: 0.8rem !important;
+  border: none !important;
+}
+
+
 
 
 

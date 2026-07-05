@@ -20,8 +20,13 @@
                   {%- if link.child_active %}
                     class="header__active-menu-item"
                   {% endif %}
+                  style="position: relative;"
                 >
                   {{- link.title | escape -}}
+                  {%- assign downcase_title = link.title | downcase -%}
+                  {%- if downcase_title contains 'sale' -%}
+                    <span class="menu-badge menu-badge--hot">HOT</span>
+                  {%- endif -%}
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
@@ -92,8 +97,13 @@
               {%- if link.current %}
                 class="header__active-menu-item"
               {% endif %}
+              style="position: relative;"
             >
               {{- link.title | escape -}}
+              {%- assign downcase_title = link.title | downcase -%}
+              {%- if downcase_title contains 'sale' -%}
+                <span class="menu-badge menu-badge--hot">HOT</span>
+              {%- endif -%}
             </span>
           </a>
         {%- endif -%}
