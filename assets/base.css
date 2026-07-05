@@ -4168,7 +4168,9 @@ details-disclosure > details {
   gap: 1.5rem !important;
   margin: 0 auto;
 }
-
+.top-bar{
+  display:block;
+}
 .top-bar .slider-button {
   background: transparent !important;
   border: none !important;
