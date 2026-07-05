@@ -10,8 +10,8 @@
 
 {%- style -%}
   .top-bar-wrapper {
-    background-color: #111111;
-    color: #ffffff;
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
     padding: 0.8rem 0;
     font-size: 1.2rem;
   }
@@ -41,33 +41,46 @@
     max-width: 50rem;
   }
   .top-bar .announcement-bar__message {
-    color: #ffffff;
+    color: {{ section.settings.text_color }} !important;
     font-family: var(--font-heading-family);
     font-weight: 500;
     font-size: 1.3rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin: 0;
+    text-align: center !important;
+    width: 100%;
   }
   .top-bar .announcement-bar__message a {
-    color: #ffffff;
+    color: {{ section.settings.text_color }} !important;
     text-decoration: underline;
   }
   .top-bar .slider-button {
-    color: #ffffff;
+    color: {{ section.settings.text_color }} !important;
   }
   .top-bar .list-social__link {
-    color: #ffffff;
-    padding: 0.5rem;
+    color: {{ section.settings.text_color }} !important;
   }
   .top-bar .localization-form {
     padding: 0;
     margin: 0;
   }
   .top-bar .localization-selector.link {
-    color: #ffffff;
+    color: {{ section.settings.text_color }} !important;
     font-size: 1.2rem;
     text-decoration: none;
+  }
+  .top-bar svg {
+    fill: {{ section.settings.text_color }} !important;
+    color: {{ section.settings.text_color }} !important;
+  }
+  /* Keep text centered on every device level */
+  .top-bar .announcement-bar__announcement {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   @media screen and (max-width: 989px) {
     .top-bar__left, .top-bar__right {
@@ -204,6 +217,18 @@
     "groups": ["header"]
   },
   "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "default": "#111111",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#ffffff",
+      "label": "Text / Icon Color"
+    },
     {
       "type": "checkbox",
       "id": "show_social",
