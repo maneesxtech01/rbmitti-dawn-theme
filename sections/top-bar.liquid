@@ -1,312 +1,492 @@
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-
 {%- liquid
-  assign social_icons = true
-  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
-    assign social_icons = false
-  endif
+  assign section_st = section.settings
+  assign theme_st = settings
+  assign section_width = section_st.section_width
+  assign color_scheme = section_st.color_scheme
 -%}
-
-{%- style -%}
-  .top-bar-wrapper {
-    background-color: {{ section.settings.bg_color }};
-    color: {{ section.settings.text_color }};
-    padding: 0.8rem 0;
-    font-size: 1.2rem;
-  }
-  .top-bar {
-  
-    justify-content: space-between;
-    align-items: center;
-    min-height: 3.5rem;
-  }
-  .top-bar__left, .top-bar__center, .top-bar__right {
-    display: flex;
-    align-items: center;
-    flex: 1 1 0% !important;
-    min-width: 0 !important;
-  }
-  .top-bar__left {
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-  .top-bar__right {
-    justify-content: flex-end;
-    gap: 2rem;
-  }
-  .top-bar__center {
-    justify-content: center;
-  }
-  .top-bar slideshow-component {
-    width: 100% !important;
-    display: block !important;
-  }
-  .top-bar .announcement-bar-slider {
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto !important;
-    max-width: 50rem;
-  }
-  .top-bar .announcement-bar-slider .slider {
-    flex-grow: 1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .top-bar .announcement-bar__message {
-    color: {{ section.settings.text_color }} !important;
-    font-family: var(--font-heading-family);
-    font-weight: 500;
-    font-size: 1.3rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin: 0;
-    text-align: center !important;
-    width: 100%;
-  }
-  .top-bar .announcement-bar__message span {
-    color: {{ section.settings.text_color }} !important;
-  }
-  .top-bar .announcement-bar__message a {
-    color: {{ section.settings.text_color }} !important;
-    text-decoration: underline;
-  }
-  .top-bar .slider-button {
-    color: {{ section.settings.text_color }} !important;
-  }
-  .top-bar .list-social__link {
-    color: {{ section.settings.text_color }} !important;
-  }
-  .top-bar .localization-form {
-    padding: 0;
-    margin: 0;
-  }
-  .top-bar .localization-selector.link {
-    color: {{ section.settings.text_color }} !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-  .top-bar svg {
-    fill: {{ section.settings.text_color }} !important;
-    color: {{ section.settings.text_color }} !important;
-  }
-  /* Keep text centered on every device level */
-  .top-bar .announcement-bar__announcement {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-  @media screen and (max-width: 989px) {
-    .top-bar__left, .top-bar__right {
-      display: none !important;
+{%- if section.blocks.size > 0 -%}
+  {%- style -%}
+    #topbar a {
+      text-decoration-line: none;
     }
-    .top-bar__center {
-      flex: 1;
+    #topbar .swiper-slide {
+      display: flex;
     }
-  }
-{%- endstyle -%}
-
-<div class="top-bar-wrapper">
-  <div class="page-width top-bar">
-    <div class="top-bar__left">
-      {%- if section.settings.show_social and social_icons -%}
-        {%- render 'social-icons' -%}
-      {%- endif -%}
-    </div>
-    
-    <div class="top-bar__center">
-      {%- if section.blocks.size == 1 -%}
-        <div class="announcement-bar" role="region" aria-label="Announcement" {{ section.blocks.first.shopify_attributes }}>
-          {%- if section.blocks.first.settings.text != blank -%}
-            {%- if section.blocks.first.settings.link != blank -%}
-              <a href="{{ section.blocks.first.settings.link }}" class="announcement-bar__link link link--text focus-inset">
-            {%- endif -%}
-            <p class="announcement-bar__message">
-              <span>{{ section.blocks.first.settings.text | escape }}</span>
-            </p>
-            {%- if section.blocks.first.settings.link != blank -%}
-              </a>
-            {%- endif -%}
-          {%- endif -%}
-        </div>
-      {%- elsif section.blocks.size > 1 -%}
-        <slideshow-component
-          class="announcement-bar"
-          role="region"
-          aria-roledescription="Carousel"
-          aria-label="Announcements"
-        >
-          <div class="announcement-bar-slider slider-buttons">
-            <button
-              type="button"
-              class="slider-button slider-button--prev"
-              name="previous"
-              aria-label="Previous"
-              aria-controls="Slider-{{ section.id }}"
-            >
-              <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </span>
-            </button>
-            <div
-              class="grid grid--1-col slider slider--everywhere"
-              id="Slider-{{ section.id }}"
-              aria-live="polite"
-              aria-atomic="true"
-              data-autoplay="{{ section.settings.auto_rotate }}"
-              data-speed="{{ section.settings.change_slides_speed }}"
-            >
-              {%- for block in section.blocks -%}
-                <div
-                  class="slideshow__slide slider__slide grid__item grid--1-col"
-                  id="Slide-{{ section.id }}-{{ forloop.index }}"
-                  {{ block.shopify_attributes }}
-                  role="group"
-                  aria-label="{{ forloop.index }} of {{ forloop.length }}"
-                  tabindex="-1"
-                >
-                  <div class="announcement-bar__announcement" role="region" aria-label="Announcement">
-                    {%- if block.settings.text != blank -%}
-                      {%- if block.settings.link != blank -%}
-                        <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
-                      {%- endif -%}
-                      <p class="announcement-bar__message">
-                        <span>{{ block.settings.text | escape }}</span>
-                      </p>
-                      {%- if block.settings.link != blank -%}
-                        </a>
-                      {%- endif -%}
-                    {%- endif -%}
-                  </div>
+    #topbar
+      .swiper:not([class*='initialized'])[data-direction='vertical']
+      .swiper-wrapper
+      .swiper-slide:not(:first-child) {
+      opacity: 0;
+    }
+    #topbar .text-slide {
+      width: 90%;
+      flex: 0 0 auto;
+      margin: 0 auto;
+    }
+    .topbar-item .list-social__item a {
+      width: 3rem;
+      height: 3rem;
+    }
+    @media (min-width: 1024px) {
+      #topbar slide-section {
+        padding-left: 4rem;
+      }
+      #topbar .text-slide {
+        width: 50%;
+        flex: 0 0 auto;
+        max-width: 40rem;
+        margin: unset;
+      }
+    }
+    @media (max-width: 1024px) {
+      #topbar .swiper-slide {
+        justify-content: center;
+      }
+    }
+  {%- endstyle -%}
+  {%- capture style -%}
+    --section-pt: {{ section_st.padding_top }}; --section-pb: {{ section_st.padding_bottom }};--swiper-navigation-color: var(--color-text);
+  {%- endcapture -%}
+  {%- liquid
+    assign hidden_block = true
+    for block in section.blocks
+      assign block_st = block.settings
+      if block_st.hidden_on_mobile == false
+        assign hidden_block = false
+        break
+      endif
+    endfor
+  -%}
+  <div
+    id="topbar"
+    class="topbar gradient{% if section_st.padding_top < 30 %} pt-min{% endif %}{% if section_st.padding_bottom < 30 %} pb-min{% endif %} section remove_spacing color-{{ color_scheme }}{% if hidden_block == true %} hidden block-1025{% endif %}{% if section_st.show_separator_line %} border-bottom{% endif %}{% if section_st.uppercase %} uppercase{% endif %}{% if section_st.show_mobile == blank %} hidden block-1025{% endif %}"
+    style="{{ style | strip | strip_newlines }}"
+  >
+    <div class="{{ section_width }}">
+      <div
+        class="flex flex-wrap flex-md-nowrap gap justify-center justify-between-1025 align-center topbar__section-inner gap-10 gap-lg-25 fs-custom {{ section_st.font_weight }}"
+        style="--font-size: {{ section_st.font_size }};"
+      >
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign block_st = block.settings
+          -%}
+          {%- case block.type -%}
+            {%- when 'store_information' -%}
+              {% if theme_st.store_email != blank or theme_st.store_phone != blank %}
+                <div class="topbar-item{% if block_st.hidden_on_mobile %} hidden flex-1025{% else %} flex{% endif %} gap-10">
+                  {%- if block_st.show_phone and theme_st.store_phone != blank -%}
+                    <a
+                      class="no-underline"
+                      href="tel:{{ theme_st.store_phone }}"
+                      arial-label="{{ theme_st.store_phone }}"
+                    >
+                      <span>{{ theme_st.store_phone }}</span>
+                    </a>
+                  {% endif %}
+                  {%- if block_st.show_email and theme_st.store_email != blank -%}
+                    <a
+                      class="no-underline"
+                      href="mailto:{{ theme_st.store_email }}"
+                      arial-label="{{ theme_st.store_email }}"
+                    >
+                      <span>{{ theme_st.store_email }}</span>
+                    </a>
+                  {% endif %}
                 </div>
-              {%- endfor -%}
-            </div>
-            <button
-              type="button"
-              class="slider-button slider-button--next"
-              name="next"
-              aria-label="Next"
-              aria-controls="Slider-{{ section.id }}"
-            >
-              <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </span>
-            </button>
-          </div>
-        </slideshow-component>
-      {%- endif -%}
-    </div>
-
-    <div class="top-bar__right">
-      {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-        <localization-form>
-          {%- form 'localization', id: 'TopBarCountryForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="TopBarCountryLabel">{{ 'localization.country_label' | t }}</h2>
-              {%- render 'country-localization', localPosition: 'TopBarCountry' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {% endif %}
-
-      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        <localization-form>
-          {%- form 'localization', id: 'TopBarLanguageForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="TopBarLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-              {%- render 'language-localization', localPosition: 'TopBarLanguage' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {%- endif -%}
+              {% endif %}
+            {%- when 'socials' -%}
+              {%- if settings.facebook != blank
+                or settings.instagram != blank
+                or settings.twitter != blank
+                or settings.tiktok != blank
+                or settings.youtube != blank
+                or settings.pinterest != blank
+                or settings.vimeo != blank
+                or settings.linkedin != blank
+                or settings.whatsapp != blank
+                or settings.tumblr != blank
+                or settings.snapchat != blank
+              -%}
+                <div class="topbar-item{% if block_st.hidden_on_mobile %} hidden block-1025{% endif %}">
+                  {%- render 'social-icons' -%}
+                </div>
+              {% endif %}
+            {%- when 'text' -%}
+              <div class="topbar-item{% if block_st.hidden_on_mobile %} hidden block-1025{% endif %}">
+                {%- if block_st.text != blank -%}
+                  <div class="topbar-message">{{- block_st.text -}}</div>
+                {% endif %}
+              </div>
+            {%- when 'text_slider' -%}
+              <div class="topbar-item w-full text-slide{% if block_st.hidden_on_mobile %} hidden block-1025{% endif %}">
+                <slide-section
+                  class="swiper bls__swiper text-center text-md-start gap-0 lazy-loading-swiper-before"
+                  data-section-id="{{ section.id }}"
+                  data-loop="true"
+                  data-autoplay="true"
+                  data-autoplaySpeed="{{ section_st.change_every }}"
+                  data-loop="true"
+                  data-mobile="1"
+                  data-tablet="1"
+                  data-desktop="1"
+                  data-direction="vertical"
+                  data-spacing="0"
+                  style="--color-dark: transparent;--swiper-navigation-color: currentColor; --col-gap: 0;--swiper-navigation-sides-offset: 1rem;"
+                >
+                  <div class="swiper-action gradient show-arrow static absolute-lg align-center left-0 inset-y-0 z-3 flex gap-20 pe-1025-25 pe-0">
+                    <div
+                      class="swiper-arrow swiper-button-prev original-style visible absolute left-10 static-lg-impo transform-md-none transition"
+                      style="--swiper-navigation-sides-offset: 1rem;--swiper-width: 0.5rem;"
+                    >
+                      <svg width="6" height="11" fill="none">
+                        <use href="#icon-back" />
+                      </svg>
+                    </div>
+                    <div
+                      class="swiper-arrow swiper-button-next original-style visible absolute right-10 static-lg-impo transform-md-none transition"
+                      style="--swiper-navigation-sides-offset: 1rem;--swiper-width: 0.5rem;"
+                    >
+                      <svg width="6" height="11" fill="none">
+                        <use href="#icon-next" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="swiper-wrapper">
+                    {%- if block_st.text1 != blank -%}
+                      <div class="swiper-slide flex align-center text-center text-lg-start lh-normal">
+                        <div class="px-15">
+                          {{- block_st.text1 -}}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {%- if block_st.text2 != blank -%}
+                      <div class="swiper-slide flex align-center text-center text-lg-start lh-normal">
+                        <div class="px-15">
+                          {{- block_st.text2 -}}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {%- if block_st.text3 != blank -%}
+                      <div class="swiper-slide flex align-center text-center text-lg-start lh-normal">
+                        <div class="px-15">
+                          {{- block_st.text3 -}}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </slide-section>
+              </div>
+            {%- when 'cur_lang' -%}
+              <div class="lang__currency-desktop justify-content-center justity-md-unset topbar-item{% if block_st.hidden_on_mobile %} hidden flex-1025{% else %} flex{% endif %} flex-wrap gap-10 gap-lg-25 align-center row-gap-0">
+                {%- if block_st.menu_link != blank -%}
+                  <ul class="linklist list-unstyled flex flex-wrap gap-10 gap-lg-25">
+                    {%- for link in block_st.menu_link.links -%}
+                      <li>
+                        <a class="no-underline block" href="{{ link.url }}" aria-label="{{ link.title }}">
+                          {{- link.title -}}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {% endif %}
+                {%- if block_st.show_our_store and theme_st.store_page and theme_st.store_address -%}
+                  <a
+                    href="{{ pages[theme_st.store_page].url | default: '#' }}"
+                    aria-label="{{ theme_st.store_address }}"
+                    class="no-underline"
+                  >
+                    {%- if theme_st.store_address != blank -%}
+                      <span>{{ theme_st.store_address }}</span>
+                    {%- else -%}
+                      <span>{{ pages[theme_st.store_page].title }}</span>
+                    {% endif %}
+                  </a>
+                {% endif %}
+                {%- if block_st.show_currency -%}
+                  {%- render 'country-switcher' -%}
+                {% endif %}
+                {%- if block_st.show_language -%}
+                  {%- render 'language-switcher' -%}
+                {% endif %}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
-</div>
-
+{% endif %}
 {% schema %}
 {
-  "name": "Top Bar",
-  "class": "top-bar-section",
+  "name": "t:sections.top-bar.name",
+  "class": "section-top-bar",
+  "limit": 1,
   "enabled_on": {
     "groups": ["header"]
   },
   "settings": [
     {
-      "type": "color",
-      "id": "bg_color",
-      "default": "#111111",
-      "label": "Background Color"
+      "type": "select",
+      "id": "section_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "t:sections.all.section_width.container.label"
+        },
+        {
+          "value": "fluid_container",
+          "label": "t:sections.all.section_width.fluid_container.label"
+        },
+        {
+          "value": "stretch_width",
+          "label": "t:sections.all.section_width.stretch_width.label"
+        },
+        {
+          "value": "full_width",
+          "label": "t:sections.all.section_width.full_width.label"
+        }
+      ],
+      "default": "stretch_width",
+      "label": "t:sections.all.section_width.label"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "default": "#ffffff",
-      "label": "Text / Icon Color"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "default-color-scheme"
     },
     {
       "type": "checkbox",
-      "id": "show_social",
-      "default": true,
-      "label": "Show social icons"
+      "id": "show_mobile",
+      "label": "t:sections.top-bar.settings.show_mobile.label"
     },
     {
       "type": "checkbox",
-      "id": "enable_country_selector",
-      "default": true,
-      "label": "Enable country/region selector"
+      "id": "show_separator_line",
+      "label": "t:sections.top-bar.settings.show_separator_line.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.content_setting.label"
     },
     {
       "type": "checkbox",
-      "id": "enable_language_selector",
-      "default": true,
-      "label": "Enable language selector"
-    },
-    {
-      "type": "checkbox",
-      "id": "auto_rotate",
-      "label": "Auto-rotate slides",
-      "default": true
+      "id": "uppercase",
+      "label": "t:sections.all.content_setting.uppercase.label"
     },
     {
       "type": "range",
-      "id": "change_slides_speed",
-      "min": 3,
-      "max": 10,
+      "id": "font_size",
+      "min": 12,
+      "max": 20,
       "step": 1,
-      "unit": "s",
-      "label": "Change slides every",
-      "default": 5
-    }
-  ],
-  "blocks": [
+      "label": "t:sections.all.content_setting.font_size.label",
+      "unit": "px",
+      "default": 12
+    },
     {
-      "type": "announcement",
-      "name": "Announcement",
-      "settings": [
+      "type": "select",
+      "id": "font_weight",
+      "options": [
         {
-          "type": "text",
-          "id": "text",
-          "default": "Coats—every friday 75% Off . Shop Sale",
-          "label": "Text"
+          "value": "body_weight",
+          "label": "t:sections.all.content_setting.font_weight.body_weight.label"
         },
         {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
+          "value": "heading_weight",
+          "label": "t:sections.all.content_setting.font_weight.heading_weight.label"
+        },
+        {
+          "value": "subheading_weight",
+          "label": "t:sections.all.content_setting.font_weight.subheading_weight.label"
+        }
+      ],
+      "default": "body_weight",
+      "label": "t:sections.all.content_setting.font_weight.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.section_padding.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:sections.all.section_padding.top.label",
+      "default": 10,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:sections.all.section_padding.bottom.label",
+      "default": 10,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "px"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "store_information",
+      "name": "t:sections.top-bar.blocks.store_information.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.all.blocks.store_info.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_email",
+          "label": "t:sections.top-bar.blocks.store_information.settings.show_email.label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_phone",
+          "label": "t:sections.top-bar.blocks.store_information.settings.show_phone.label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_on_mobile",
+          "label": "t:sections.top-bar.blocks.hidden_on_mobile.label",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "socials",
+      "name": "t:sections.top-bar.blocks.social_link.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.all.blocks.socials.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_on_mobile",
+          "label": "t:sections.top-bar.blocks.hidden_on_mobile.label",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.top-bar.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "t:sections.top-bar.blocks.text.name",
+          "default": "Free Shipping for all order over $99"
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_on_mobile",
+          "label": "t:sections.top-bar.blocks.hidden_on_mobile.label",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "text_slider",
+      "name": "t:sections.top-bar.blocks.text_slider.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text1",
+          "label": "t:sections.top-bar.blocks.text_slider.settings.text_1.label",
+          "default": "Sign up for 10% off your first order. Sign Up"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text2",
+          "label": "t:sections.top-bar.blocks.text_slider.settings.text_2.label",
+          "default": "100% secure online payment"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text3",
+          "label": "t:sections.top-bar.blocks.text_slider.settings.text_3.label",
+          "default": "Free Shipping for all order over $99"
+        },
+        {
+          "type": "range",
+          "id": "change_every",
+          "min": 3,
+          "max": 6,
+          "step": 1,
+          "label": "t:sections.top-bar.blocks.text_slider.settings.change_every.label",
+          "unit": "s",
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_on_mobile",
+          "label": "t:sections.top-bar.blocks.hidden_on_mobile.label"
+        }
+      ]
+    },
+    {
+      "type": "cur_lang",
+      "name": "t:sections.top-bar.blocks.cur_lang.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu_link",
+          "label": "t:sections.top-bar.blocks.link_list.settings.menu.label",
+          "default": "footer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_currency",
+          "label": "t:sections.top-bar.blocks.cur_lang.settings.show_currency.label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_language",
+          "label": "t:sections.top-bar.blocks.cur_lang.settings.show_language.label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_our_store",
+          "label": "t:sections.top-bar.blocks.cur_lang.settings.show_our_store.label",
+          "default": false
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.all.blocks.store.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_on_mobile",
+          "label": "t:sections.top-bar.blocks.hidden_on_mobile.label",
+          "default": true
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Top Bar",
+      "name": "t:sections.top-bar.name",
       "blocks": [
         {
-          "type": "announcement"
+          "type": "text_slider"
+        },
+        {
+          "type": "cur_lang"
         }
       ]
     }
