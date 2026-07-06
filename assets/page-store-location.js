@@ -3,7 +3,9 @@ var map;
 var BlsCreateMapStoreLocation = (function () {
     return {
         init: function () {
-            mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+            const mapEl = document.getElementById('map');
+            const token = mapEl ? mapEl.getAttribute('data-access-token') : '';
+            mapboxgl.accessToken = token || 'YOUR_MAPBOX_PUBLIC_TOKEN';
             map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v12',
