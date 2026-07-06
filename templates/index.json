@@ -33,8 +33,8 @@
             "content_max_width": 100,
             "content_padding_block": 120,
             "content_padding_inline": 30,
-            "show_content_background": false,
-            "content_background": "#ffffff",
+            "show_content_background": true,
+            "content_background": "#FFFFFF",
             "content_box_opacity": 100,
             "content_alignment_mobile": "left"
           }
