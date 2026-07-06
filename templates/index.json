@@ -73,6 +73,18 @@
     },
     "collection_list": {
       "type": "collection-list",
+      "blocks": {
+        "collection_VkU6Wj": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "collection_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_VkU6Wj"
+      ],
       "settings": {
         "section_width": "fluid_container",
         "color_scheme": "",
@@ -109,29 +121,10 @@
         "padding_bottom": 36,
         "reset_spacing": false
       }
-    },
-    "scrolling_text": {
-      "type": "scrolling-text",
-      "settings": {
-        "section_width": "full_width",
-        "color_scheme": "",
-        "direction": "left",
-        "icon_between_item": "unset",
-        "speed": 20,
-        "space_between_text": 60,
-        "font_size": 16,
-        "font_weight": "body_weight",
-        "uppercase": false,
-        "use_heading_font": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
     }
   },
   "order": [
     "slideshow",
-    "collection_list",
-    "scrolling_text"
+    "collection_list"
   ]
 }
