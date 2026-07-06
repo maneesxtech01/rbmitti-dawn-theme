@@ -17,9 +17,9 @@
           "settings": {
             "image": "shopify://shop_images/hero_slider_content.png",
             "overlay_opacity": 19,
-            "slider_effect": "effect_fadeindown",
-            "subheading": "Subheading",
-            "heading": "Image slide",
+            "slider_effect": "effect_fadein",
+            "subheading": "",
+            "heading": "Revive the Authentic Taste of Tradition",
             "description": "<p>Tell your brand's story through images</p>",
             "first_button_label": "Button label",
             "first_button_link": "",
