@@ -74,7 +74,7 @@
       "settings": {
         "section_width": "full_width",
         "slide_height": "large",
-        "desktop_height": 1000,
+        "desktop_height": 800,
         "mobile_height": 360,
         "color_scheme": "",
         "subheading_font_size": 14,
@@ -93,7 +93,7 @@
         "pagination_position": "center",
         "autoplay": false,
         "autorotate_speed": 5,
-        "content_below_image": false,
+        "content_below_image": true,
         "padding_top": 0,
         "padding_bottom": 0,
         "reset_spacing": false
