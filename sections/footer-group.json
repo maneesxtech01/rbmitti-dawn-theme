@@ -24,7 +24,7 @@
             "store_address": false,
             "store_phone": true,
             "store_email": true,
-            "content_width": "33.333%"
+            "content_width": "25%"
           }
         },
         "link_list_JTq77M": {
@@ -32,7 +32,7 @@
           "settings": {
             "heading": "COMPANY",
             "menu": "company",
-            "content_width": "16%"
+            "content_width": "25%"
           }
         },
         "link_list_x4zwRH": {
