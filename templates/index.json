@@ -15,7 +15,7 @@
         "slider_item_XF7KWB": {
           "type": "slider_item",
           "settings": {
-            "image": "shopify://shop_images/hero_slider_content.png",
+            "image": "shopify://shop_images/Clay_Water_Mug_or_glass.webp",
             "overlay_opacity": 19,
             "slider_effect": "effect_fadein",
             "subheading": "100% Organic & Handcrafted",
@@ -38,37 +38,10 @@
             "content_box_opacity": 100,
             "content_alignment_mobile": "left"
           }
-        },
-        "slider_item_tdyjME": {
-          "type": "slider_item",
-          "settings": {
-            "overlay_opacity": 0,
-            "slider_effect": "effect_fadeindown",
-            "subheading": "Subheading",
-            "heading": "Image slide",
-            "description": "<p>Tell your brand's story through images</p>",
-            "first_button_label": "Button label",
-            "first_button_link": "",
-            "first_button_style": false,
-            "second_button_label": "",
-            "second_button_link": "",
-            "second_button_style": false,
-            "content_alignment": "left",
-            "content_position": "bottom-left",
-            "content_width": "container",
-            "content_max_width": 100,
-            "content_padding_block": 60,
-            "content_padding_inline": 30,
-            "show_content_background": false,
-            "content_background": "#ffffff",
-            "content_box_opacity": 100,
-            "content_alignment_mobile": "left"
-          }
         }
       },
       "block_order": [
-        "slider_item_XF7KWB",
-        "slider_item_tdyjME"
+        "slider_item_XF7KWB"
       ],
       "custom_css": [
         ".sec__content-inner {max-width: 550px;}"
