@@ -329,9 +329,26 @@
       </div>
     </div>
   {% endif %}
+  {%- if section_st.bottom_image != blank -%}
+    <div class="footer__bottom-image py-20 pb-md-30">
+      <div class="{{ container }}">
+        <div class="flex justify-center">
+          <div style="max-width: {{ section_st.bottom_image_width }}px; width: 100%;">
+            {%- assign image_alt = section_st.bottom_image.alt | default: 'Footer bottom image' -%}
+            {%- render 'responsive-image',
+              type: 'banner',
+              image: section_st.bottom_image,
+              image_alt: image_alt,
+              no_animate: true
+            -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
   <div class="footer__bottom">
     <div class="{{ container }}">
-      <div class="footer_bottom-inner justify-center justify-md-end flex flex-wrap flex-md-nowrap align-center border-top gap-20 gap-xl-30 py-30">
+      <div class="footer_bottom-inner justify-center justify-md-between flex flex-wrap flex-md-nowrap align-center border-top gap-20 gap-xl-30 py-30">
         {%- if section_st.enable_country_selector
           or section_st.enable_language_selector
           or section_st.copyright_text
@@ -522,6 +539,25 @@
       "unit": "px",
       "label": "t:sections.footer.settings.payment_width",
       "default": 335
+    },
+    {
+      "type": "header",
+      "content": "Footer Bottom Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image",
+      "label": "Bottom Image (Pottery Row, etc.)"
+    },
+    {
+      "type": "range",
+      "id": "bottom_image_width",
+      "min": 100,
+      "max": 1400,
+      "step": 20,
+      "unit": "px",
+      "label": "Bottom Image Width",
+      "default": 1200
     },
     {
       "type": "header",

@@ -1989,6 +1989,9 @@ header.active li.visible .submenu:not(.submenu-vertical) {
   .justify-md-end {
     justify-content: flex-end;
   }
+  .justify-md-between {
+    justify-content: space-between;
+  }
   .gap-md-20 {
     gap: 2rem;
   }
