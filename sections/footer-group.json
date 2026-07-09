@@ -46,11 +46,11 @@
         "newsletter_Rk8BD6": {
           "type": "newsletter",
           "settings": {
-            "heading": "Sign Up to Newsletter",
-            "description": "Sign up for 10% off your first purchase and free shipping. Updates information on Sales and Offers.",
+            "heading": "STAY CONNECTED",
+            "description": "Get early access to new designs, special offers, and the stories behind every handmade piece.",
             "email_placeholder": "Enter your email...",
-            "button_label": "Sign Up",
-            "note": "***By entering the e-mail you accept the<a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\"> <strong>terms and conditions</strong></a> and the <a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\"><strong>privacy policy.</strong></a>",
+            "button_label": "Subscribe",
+            "note": "",
             "content_width": "33.333%"
           }
         }
