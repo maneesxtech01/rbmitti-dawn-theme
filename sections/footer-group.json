@@ -73,7 +73,6 @@
         "payment_enable": true,
         "payment_image": "shopify://shop_images/payment-logoss.png",
         "payment_width": 180,
-        "bottom_image": "shopify://shop_images/footer-bg.webp",
         "bottom_image_width": 1400,
         "copyright_text": "© 2026 RB Mitti. All rights reserved.",
         "footer_heading_size": 16,
