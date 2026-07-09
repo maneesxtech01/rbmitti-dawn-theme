@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slider_item_XF7KWB": {
+          "type": "slider_item",
+          "settings": {
+            "image": "shopify://shop_images/Clay_Water_Mug_or_glass.webp",
+            "image_mobile": "shopify://shop_images/Clay_Water_Cooler_Matka_mobile.webp",
+            "overlay_opacity": 0,
+            "slider_effect": "effect_fadein",
+            "subheading": "100% Organic & Handcrafted",
+            "heading": "Revive the Authentic Taste of Tradition",
+            "description": "<p>Bring health and elegance to your dining table with premium, natural clay cookware.</p>",
+            "first_button_label": "Shop The Collection",
+            "first_button_link": "",
+            "first_button_style": false,
+            "second_button_label": "",
+            "second_button_link": "",
+            "second_button_style": false,
+            "content_alignment": "left",
+            "content_position": "bottom-left",
+            "content_width": "container",
+            "content_max_width": 100,
+            "content_padding_block": 120,
+            "content_padding_inline": 30,
+            "show_content_background": false,
+            "content_background": "#ffffff",
+            "content_box_opacity": 100,
+            "content_alignment_mobile": "left"
+          }
+        },
+        "slider_item_ge6R7w": {
+          "type": "slider_item",
+          "settings": {
+            "image": "shopify://shop_images/Clay_Water_Cooler_Matka.webp",
+            "image_mobile": "shopify://shop_images/Clay_Water_Cooler_Matka_mobile.webp",
+            "overlay_opacity": 0,
+            "slider_effect": "effect_fadein",
+            "subheading": "100% Organic & Handcrafted",
+            "heading": "Revive the Authentic Taste of Tradition",
+            "description": "<p>Bring health and elegance to your dining table with premium, natural clay cookware.</p>",
+            "first_button_label": "Shop The Collection",
+            "first_button_link": "",
+            "first_button_style": false,
+            "second_button_label": "",
+            "second_button_link": "",
+            "second_button_style": false,
+            "content_alignment": "left",
+            "content_position": "bottom-left",
+            "content_width": "container",
+            "content_max_width": 100,
+            "content_padding_block": 120,
+            "content_padding_inline": 30,
+            "show_content_background": false,
+            "content_background": "#ffffff",
+            "content_box_opacity": 100,
+            "content_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "slider_item_XF7KWB",
+        "slider_item_ge6R7w"
+      ],
+      "custom_css": [
+        ".sec__content-inner {max-width: 550px;}"
+      ],
+      "settings": {
+        "section_width": "full_width",
+        "slide_height": "large",
+        "desktop_height": 1000,
+        "mobile_height": 450,
+        "color_scheme": "scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9",
+        "subheading_font_size": 14,
+        "subheading_font_weight": "body_weight",
+        "subheading_spacing_bottom": 10,
+        "heading_font_size": 45,
+        "heading_font_weight": "heading_weight",
+        "heading_uppercase": false,
+        "heading_spacing_bottom": 10,
+        "des_font_size": 20,
+        "des_font_weight": "body_weight",
+        "des_spacing_bottom": 20,
+        "slide_effect": "fade",
+        "show_arrow": true,
+        "carousel_pagination": "show_dots",
+        "pagination_position": "right",
+        "autoplay": true,
+        "autorotate_speed": 5,
+        "content_below_image": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    }
+  },
+  "order": [
+    "slideshow"
+  ]
+}
