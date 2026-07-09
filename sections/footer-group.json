@@ -17,6 +17,7 @@
         "store_info_tUhcyD": {
           "type": "store_info",
           "settings": {
+            "image": "shopify://shop_images/payment-cion.avif",
             "image_width": 70,
             "store_heading": "Help Customers",
             "store_description": "<p>Find a location nearest you to reduce shipping costs and make <br/>shopping easier. <a href=\"https://www.google.com/maps\" target=\"_blank\" title=\"https://www.google.com/maps\"><strong>Show on google maps.</strong></a></p>",
@@ -70,10 +71,11 @@
         "enable_follow_on_shop": true,
         "show_social": true,
         "payment_enable": true,
+        "payment_image": "shopify://shop_images/payment-cion.avif",
         "payment_width": 400,
         "bottom_image": "shopify://shop_images/footer-bg.webp",
         "bottom_image_width": 1400,
-        "copyright_text": "© 2025 Glozin store. All rights reserved.",
+        "copyright_text": "© 2026 RB Mitti. All rights reserved.",
         "footer_heading_size": 16,
         "padding_top": 60,
         "padding_bottom": 45,
