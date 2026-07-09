@@ -330,20 +330,25 @@
     </div>
   {% endif %}
   {%- if section_st.bottom_image != blank -%}
-    <div class="footer__bottom-image py-20 pb-md-30">
-      <div class="{{ container }}">
-        <div class="flex justify-center">
-          <div style="max-width: {{ section_st.bottom_image_width }}px; width: 100%;">
-            {%- assign image_alt = section_st.bottom_image.alt | default: 'Footer bottom image' -%}
-            {%- render 'responsive-image',
-              type: 'banner',
-              image: section_st.bottom_image,
-              image_alt: image_alt,
-              no_animate: true
-            -%}
-          </div>
-        </div>
-      </div>
+    <style>
+      .footer__bottom-image {
+        margin-top: 20px;
+      }
+      @media screen and (min-width: 768px) {
+        .footer__bottom-image {
+          margin-top: 40px;
+        }
+      }
+    </style>
+    <div class="footer__bottom-image">
+      {%- assign image_alt = section_st.bottom_image.alt | default: 'Footer bottom image' -%}
+      {%- render 'responsive-image',
+        type: 'banner',
+        image: section_st.bottom_image,
+        image_alt: image_alt,
+        no_animate: true,
+        class: 'w-full block'
+      -%}
     </div>
   {%- endif -%}
   <div class="footer__bottom">
