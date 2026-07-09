@@ -132,7 +132,7 @@
         "menu_promotion_rWzQL6"
       ],
       "settings": {
-        "section_width": "stretch_width",
+        "section_width": "fluid_container",
         "color_scheme": "",
         "logo_position": "left",
         "separator_line": "homepage",
