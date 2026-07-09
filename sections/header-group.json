@@ -134,7 +134,7 @@
       "settings": {
         "section_width": "stretch_width",
         "color_scheme": "",
-        "logo_position": "left",
+        "logo_position": "center",
         "separator_line": "homepage",
         "enable_login_popup": true,
         "sticky_header_type": "on-scroll-up",
