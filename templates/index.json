@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/Clay_Water_Mug_or_glass.webp",
             "image_mobile": "shopify://shop_images/Clay_Water_Cooler_Matka_mobile.webp",
-            "overlay_opacity": 19,
+            "overlay_opacity": 0,
             "slider_effect": "effect_fadein",
             "subheading": "100% Organic & Handcrafted",
             "heading": "Revive the Authentic Taste of Tradition",
@@ -45,7 +45,7 @@
           "settings": {
             "image": "shopify://shop_images/Clay_Water_Cooler_Matka.webp",
             "image_mobile": "shopify://shop_images/Clay_Water_Cooler_Matka_mobile.webp",
-            "overlay_opacity": 19,
+            "overlay_opacity": 0,
             "slider_effect": "effect_fadein",
             "subheading": "100% Organic & Handcrafted",
             "heading": "Revive the Authentic Taste of Tradition",
