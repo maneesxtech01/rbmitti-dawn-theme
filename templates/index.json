@@ -52,7 +52,7 @@
             "description": "<p>Bring health and elegance to your dining table with premium, natural clay cookware.</p>",
             "first_button_label": "Shop The Collection",
             "first_button_link": "",
-            "first_button_style": true,
+            "first_button_style": false,
             "second_button_label": "",
             "second_button_link": "",
             "second_button_style": false,
