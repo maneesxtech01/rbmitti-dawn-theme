@@ -17,8 +17,8 @@
         "store_info_tUhcyD": {
           "type": "store_info",
           "settings": {
-            "image": "shopify://shop_images/rb-mitti.png",
-            "image_width": 124,
+            "image": "shopify://shop_images/rbb-mitti-logo.png",
+            "image_width": 164,
             "store_heading": "",
             "store_description": "<h4>Get In Touch</h4>",
             "store_address": false,
