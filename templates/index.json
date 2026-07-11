@@ -110,7 +110,7 @@
         "collection_m4tRCE": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "cookware",
             "collection_title": ""
           }
         },
