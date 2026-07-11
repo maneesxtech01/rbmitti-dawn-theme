@@ -110,21 +110,24 @@
         "collection_m4tRCE": {
           "type": "collection",
           "settings": {
-            "collection": "cookware",
-            "collection_title": ""
+            "collection": "dinner-sets",
+            "collection_image": "shopify://shop_images/04.webp",
+            "collection_title": "Dinner Sets"
           }
         },
         "collection_bRUhY7": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_title": ""
+            "collection": "cookware",
+            "collection_image": "shopify://shop_images/17.webp",
+            "collection_title": "Cookware"
           }
         },
         "collection_4eirML": {
           "type": "collection",
           "settings": {
             "collection": "",
+            "collection_image": "shopify://shop_images/18.webp",
             "collection_title": ""
           }
         },
