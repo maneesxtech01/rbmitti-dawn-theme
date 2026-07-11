@@ -142,7 +142,7 @@
         "collection_xMd3n6": {
           "type": "collection",
           "settings": {
-            "collection": "wooden-collection",
+            "collection": "wooden-tools",
             "collection_image": "shopify://shop_images/Wooden_Spatula_Set_3_Pieces.webp",
             "collection_title": "Wooden Collection"
           }
@@ -150,7 +150,7 @@
         "collection_4VfYMk": {
           "type": "collection",
           "settings": {
-            "collection": "kids-collection",
+            "collection": "kids-toys",
             "collection_image": "shopify://shop_images/kids_clay_toys.webp",
             "collection_title": "Kids Collection"
           }
@@ -171,8 +171,8 @@
       "settings": {
         "section_width": "fluid_container",
         "color_scheme": "default",
-        "heading": "Collection list",
-        "description": "",
+        "heading": "Shop RB Mitti Collections",
+        "description": "<p>From handmade clay cookware to dinnerware, drinkware, marble kitchen, wooden utensils, and kids collection every piece is crafted with 100% natural materials and delivered right to your doorstep.</p>",
         "show_view_all_button": false,
         "header_size": "medium",
         "header_alignment": "center",
