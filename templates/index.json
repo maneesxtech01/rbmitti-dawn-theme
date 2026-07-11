@@ -126,15 +126,16 @@
         "collection_4eirML": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "drinkware",
             "collection_image": "shopify://shop_images/18.webp",
-            "collection_title": ""
+            "collection_title": "Drinkware"
           }
         },
         "collection_xyi7Lh": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "marble-tools",
+            "collection_image": "shopify://shop_images/Marble_Rolling_Board.png",
             "collection_title": ""
           }
         }
