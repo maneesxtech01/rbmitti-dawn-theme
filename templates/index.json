@@ -212,20 +212,28 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "collection_title": ""
+            "collection_title": "Best Selling"
           }
         },
         "collection_t7xYRg": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "collection_title": ""
+            "collection_title": "Trending"
+          }
+        },
+        "collection_P6R7Be": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_title": "Sale"
           }
         }
       },
       "block_order": [
         "collection_G7brB8",
-        "collection_t7xYRg"
+        "collection_t7xYRg",
+        "collection_P6R7Be"
       ],
       "name": "t:sections.collection-tab.name",
       "settings": {
