@@ -35,11 +35,19 @@
     assign action_when_click_added_wishlist = theme_st.action_when_click_added_wishlist
     assign product_style = theme_st.product_style
     assign show_quick_view = theme_st.show_quick_view
+<<<<<<< HEAD
     assign show_wishlist = true
     assign show_compare = theme_st.show_compare
     assign show_vendor = theme_st.show_vendor
     assign show_short_description = theme_st.show_short_description
     assign show_rate = true
+=======
+    assign show_wishlist = theme_st.show_wishlist
+    assign show_compare = theme_st.show_compare
+    assign show_vendor = theme_st.show_vendor
+    assign show_short_description = theme_st.show_short_description
+    assign show_rate = theme_st.show_rate
+>>>>>>> 67ce3b32157217d415a148486ebd64ad3ef80bed
     assign show_secondary_image = theme_st.show_secondary_image
     assign show_add_cart = theme_st.show_add_cart
     assign show_variant = theme_st.show_variant
@@ -380,6 +388,7 @@
                     {%- render 'review' | product: card_product -%}
                   </script>
                 </review-product>
+<<<<<<< HEAD
               {%- else -%}
                 {% comment %} Generate mock reviews randomly {% endcomment %}
                 {% assign random_seed = card_product.id | slice: -2, 2 | plus: 0 %}
@@ -430,6 +439,8 @@
                   </div>
                   <span class="fs-12 text-grey" style="color: #888; font-size: 12px; margin-inline-start: 4px;">({{ rating_count }})</span>
                 </div>
+=======
+>>>>>>> 67ce3b32157217d415a148486ebd64ad3ef80bed
               {%- endif -%}
             {%- endif -%}
           {%- endif -%}
