@@ -164,9 +164,9 @@
           "dinner-sets",
           "cookware",
           "drinkware",
-          "kids-collection",
           "marble-tools",
-          "wooden-collection"
+          "wooden-collection",
+          "kids-collection"
         ],
         "menu_mobile_color": "#ffffff",
         "menu_mobile_background": "#b65b2b",
