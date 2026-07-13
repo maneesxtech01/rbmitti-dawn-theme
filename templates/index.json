@@ -211,21 +211,29 @@
         "collection_3k3nU3": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_title": ""
+            "collection": "frontpage",
+            "collection_title": "Best Selling"
           }
         },
         "collection_bb8Ma7": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "collection_title": ""
+            "collection": "frontpage",
+            "collection_title": "Trending"
+          }
+        },
+        "collection_N7heWq": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "collection_title": "Sale"
           }
         }
       },
       "block_order": [
         "collection_3k3nU3",
-        "collection_bb8Ma7"
+        "collection_bb8Ma7",
+        "collection_N7heWq"
       ],
       "name": "t:sections.collection-tab.name",
       "settings": {
