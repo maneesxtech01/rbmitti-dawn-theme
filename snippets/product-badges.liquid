@@ -188,7 +188,7 @@
     assign badge_rem = badge_seed | modulo: 10
     if badge_rem < 7
       assign random_badge = 'new'
-    elif badge_rem < 9
+    elsif badge_rem < 9
       assign random_badge = 'pre_order'
     else
       assign random_badge = 'sale'
