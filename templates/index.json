@@ -430,81 +430,129 @@
         "reset_spacing": false
       }
     },
-    "instagram_33zk7N": {
-      "type": "instagram",
+    "instagram_shop_jtwaxQ": {
+      "type": "instagram-shop",
       "blocks": {
-        "instagram_manual_upload_wWxXjU": {
+        "instagram_manual_upload_gPnTCz": {
           "type": "instagram_manual_upload",
           "settings": {
             "image": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
-            "link": ""
+            "more_info": "",
+            "instagram_post_name": "",
+            "link": "",
+            "product__1": "5-piece-premium-wooden-kitchen-spoon-set",
+            "offset_top__1": 12,
+            "offset_left__1": 32,
+            "product__2": "",
+            "offset_top__2": 1,
+            "offset_left__2": 43,
+            "product__3": "",
+            "offset_top__3": 10,
+            "offset_left__3": 40,
+            "product__4": "",
+            "offset_top__4": 60,
+            "offset_left__4": 70,
+            "product__5": "",
+            "offset_top__5": 1,
+            "offset_left__5": 4
           }
         },
-        "instagram_manual_upload_zPDzgd": {
+        "instagram_manual_upload_XyNzYh": {
           "type": "instagram_manual_upload",
           "settings": {
-            "image": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
-            "link": ""
+            "more_info": "",
+            "instagram_post_name": "",
+            "link": "",
+            "product__1": "",
+            "offset_top__1": 12,
+            "offset_left__1": 32,
+            "product__2": "",
+            "offset_top__2": 1,
+            "offset_left__2": 43,
+            "product__3": "",
+            "offset_top__3": 10,
+            "offset_left__3": 40,
+            "product__4": "",
+            "offset_top__4": 60,
+            "offset_left__4": 70,
+            "product__5": "",
+            "offset_top__5": 1,
+            "offset_left__5": 4
           }
         },
-        "instagram_manual_upload_kTfVtT": {
+        "instagram_manual_upload_39y8yU": {
           "type": "instagram_manual_upload",
           "settings": {
-            "image": "shopify://shop_images/Clay_Plate.webp",
-            "link": ""
+            "more_info": "",
+            "instagram_post_name": "",
+            "link": "",
+            "product__1": "",
+            "offset_top__1": 12,
+            "offset_left__1": 32,
+            "product__2": "",
+            "offset_top__2": 1,
+            "offset_left__2": 43,
+            "product__3": "",
+            "offset_top__3": 10,
+            "offset_left__3": 40,
+            "product__4": "",
+            "offset_top__4": 60,
+            "offset_left__4": 70,
+            "product__5": "",
+            "offset_top__5": 1,
+            "offset_left__5": 4
           }
         },
-        "instagram_manual_upload_XeRnb3": {
+        "instagram_manual_upload_C3dABp": {
           "type": "instagram_manual_upload",
           "settings": {
-            "image": "shopify://shop_images/Clay_Plate.webp",
-            "link": ""
-          }
-        },
-        "instagram_manual_upload_6QXC8q": {
-          "type": "instagram_manual_upload",
-          "settings": {
-            "image": "shopify://shop_images/02.png",
-            "link": ""
-          }
-        },
-        "instagram_manual_upload_mUDaHU": {
-          "type": "instagram_manual_upload",
-          "settings": {
-            "image": "shopify://shop_images/02.png",
-            "link": ""
+            "more_info": "",
+            "instagram_post_name": "",
+            "link": "",
+            "product__1": "",
+            "offset_top__1": 12,
+            "offset_left__1": 32,
+            "product__2": "",
+            "offset_top__2": 1,
+            "offset_left__2": 43,
+            "product__3": "",
+            "offset_top__3": 10,
+            "offset_left__3": 40,
+            "product__4": "",
+            "offset_top__4": 60,
+            "offset_left__4": 70,
+            "product__5": "",
+            "offset_top__5": 1,
+            "offset_left__5": 4
           }
         }
       },
       "block_order": [
-        "instagram_manual_upload_wWxXjU",
-        "instagram_manual_upload_zPDzgd",
-        "instagram_manual_upload_kTfVtT",
-        "instagram_manual_upload_XeRnb3",
-        "instagram_manual_upload_6QXC8q",
-        "instagram_manual_upload_mUDaHU"
+        "instagram_manual_upload_gPnTCz",
+        "instagram_manual_upload_XyNzYh",
+        "instagram_manual_upload_39y8yU",
+        "instagram_manual_upload_C3dABp"
       ],
-      "name": "t:sections.instagram.name",
+      "name": "t:sections.instagram-shop.name",
       "settings": {
-        "section_width": "full_width",
+        "section_width": "fluid_container",
         "color_scheme": "",
-        "heading": "Instagram",
+        "heading": "Shop by Gram",
         "description": "",
         "header_size": "medium",
         "header_alignment": "center",
         "image_ratio": "adapt",
         "custom_ratio": "",
-        "display_mode": "carousel",
+        "hotspot_style": "plus",
         "items_per_row": 3,
         "column_gap": 30,
         "show_arrow": false,
         "carousel_pagination": "disable",
-        "infinite": true,
-        "autoplay": true,
-        "autorotate_speed": 2,
-        "reveal": true,
-        "carousel_on_mobile": false,
-        "items_per_row_mobile": 1,
+        "infinite": false,
+        "autoplay": false,
+        "autorotate_speed": 5,
+        "reveal": false,
+        "items_per_row_mobile": 2,
         "padding_top": 0,
         "padding_bottom": 0,
         "reset_spacing": false
@@ -580,7 +628,7 @@
     "video_width_text_ovlerlay_YJPBFq",
     "product_bundle_ye7HDe",
     "product_testimonials_4yeNfR",
-    "instagram_33zk7N",
+    "instagram_shop_jtwaxQ",
     "icon_box_xXxq8t"
   ]
 }
