@@ -218,7 +218,7 @@
         "header_alignment": "center",
         "collection": "frontpage",
         "items_to_show": 8,
-        "items_per_row": 4,
+        "items_per_row": 3,
         "column_gap": 30,
         "show_banner": false,
         "sticky_banner": false,
