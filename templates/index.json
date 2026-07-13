@@ -429,6 +429,70 @@
         "padding_bottom": 0,
         "reset_spacing": false
       }
+    },
+    "instagram_33zk7N": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_manual_upload_wWxXjU": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
+            "link": ""
+          }
+        },
+        "instagram_manual_upload_zPDzgd": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
+            "link": ""
+          }
+        },
+        "instagram_manual_upload_kTfVtT": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/Clay_Plate.webp",
+            "link": ""
+          }
+        },
+        "instagram_manual_upload_6QXC8q": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/02.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_manual_upload_wWxXjU",
+        "instagram_manual_upload_zPDzgd",
+        "instagram_manual_upload_kTfVtT",
+        "instagram_manual_upload_6QXC8q"
+      ],
+      "name": "t:sections.instagram.name",
+      "settings": {
+        "section_width": "fluid_container",
+        "color_scheme": "",
+        "heading": "Instagram",
+        "description": "",
+        "header_size": "medium",
+        "header_alignment": "center",
+        "image_ratio": "adapt",
+        "custom_ratio": "",
+        "display_mode": "carousel",
+        "items_per_row": 4,
+        "column_gap": 30,
+        "show_arrow": false,
+        "carousel_pagination": "disable",
+        "infinite": true,
+        "autoplay": false,
+        "autorotate_speed": 2,
+        "reveal": true,
+        "carousel_on_mobile": false,
+        "items_per_row_mobile": 1,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
     }
   },
   "order": [
@@ -437,6 +501,7 @@
     "collection_tab_Q8KE9j",
     "video_width_text_ovlerlay_YJPBFq",
     "product_bundle_ye7HDe",
-    "product_testimonials_4yeNfR"
+    "product_testimonials_4yeNfR",
+    "instagram_33zk7N"
   ]
 }
