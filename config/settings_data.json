@@ -181,7 +181,7 @@
             "traditional-hand-painted-clay-serving-bowl",
             "wooden-chakla-belan-set-rolling-pin-board"
           ],
-          "fake_user": "Ali (Karachi)\nAyesha (Karachi)\nAhmed (Lahore)\nFatima (Lahore)\nHassan (Islamabad)\nZainab (Islamabad)\nUsman (Rawalpindi)\nMaham (Rawalpindi)\nBilal (Faisalabad)\nHira (Faisalabad)\nHamza (Multan)\nMaryam (Multan)\nSaad (Peshawar)\nIqra (Peshawar)",
+          "fake_user": "Ali (Karachi) | Ayesha (Karachi) | Ahmed (Lahore) | Fatima (Lahore) | Hassan (Islamabad) | Zainab (Islamabad) | Usman (Rawalpindi) | Maham (Rawalpindi) | Bilal (Faisalabad) | Hira (Faisalabad) | Hamza (Multan) | Maryam (Multan) | Saad (Peshawar) | Iqra (Peshawar)",
           "text_verify": "Verify",
           "delay_time": "5000",
           "display_time": "6000"
