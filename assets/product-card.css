@@ -608,7 +608,6 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   --btn-border-color: var(--btn-primary-hover-bg-color);
   --btn-bg: var(--btn-primary-hover-bg-color);
   --btn-bg-gradient: var(--btn-primary-hover-bg-color-graident);
-<<<<<<< HEAD
 }
 
 /* Custom Wishlist Hover Effect */
@@ -624,6 +623,4 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
     visibility: visible !important;
     transform: scale(1) !important;
   }
-=======
->>>>>>> 67ce3b32157217d415a148486ebd64ad3ef80bed
 }

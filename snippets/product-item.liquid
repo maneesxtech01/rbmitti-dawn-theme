@@ -35,19 +35,11 @@
   assign action_when_click_added_wishlist = theme_st.action_when_click_added_wishlist
   assign product_style = theme_st.product_style
   assign show_quick_view = theme_st.show_quick_view
-<<<<<<< HEAD
   assign show_wishlist = true
   assign show_compare = theme_st.show_compare
   assign show_vendor = theme_st.show_vendor
   assign show_short_description = theme_st.show_short_description
   assign show_rate = true
-=======
-  assign show_wishlist = theme_st.show_wishlist
-  assign show_compare = theme_st.show_compare
-  assign show_vendor = theme_st.show_vendor
-  assign show_short_description = theme_st.show_short_description
-  assign show_rate = theme_st.show_rate
->>>>>>> 67ce3b32157217d415a148486ebd64ad3ef80bed
   assign show_secondary_image = theme_st.show_secondary_image
   assign show_add_cart = theme_st.show_add_cart
   assign show_variant = theme_st.show_variant
@@ -379,109 +371,6 @@
                       </button-quickview>
                     {%- endif -%}
                   </div>
-                {% endif %}
-              {% endif %}
-              {% if product_style != 'morden' %}
-                {% if template_enable_add_cart == true and show_add_cart and theme_st.enable_catalog_mode == false %}
-                  {%- liquid
-                    assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
-                    assign qty_rules = false
-                    if card_product.selected_or_first_available_variant.quantity_rule.template > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
-                      assign qty_rules = true
-                    endif
-                  -%}
-                  {%- if card_product.variants.size > 1 or qty_rules -%}
-                    {% comment %} Case select options {% endcomment %}
-                    <select-option
-                      tabindex="0"
-                      data-custom-class="quickview"
-                      data-item="overlay-quickbuy"
-                      data-url="/products/{{ card_product.handle }}?section_id=product-quickview&ajax=1"
-                      class="{% if product_style == 'card' %}invisible-1025 {% endif %}product__add-cart product-item__select-options transition btn btn-white shadow text-center w-45 h-45 w-1025-auto h-1025-auto inline-flex content-center relative absolute-1025 z-5 bottom-1025-15 left-1025-15 right-1025-15"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="spin opacity-0 icon-load">
-                        <use href="#icon-load"></use>
-                      </svg>
-                      <svg width="12" height="14" fill="none" class="block hidden-1025 hidden-on-load icon-cart">
-                        <use href="#icon-cart" />
-                      </svg>
-                      <span class="hidden block-1025 hidden-on-load">
-                        {{- 'products.product.actions.select_options.label' | t -}}
-                      </span>
-                    </select-option>
-                    <noscript>
-                      <a
-                        href="{{ card_product.url }}"
-                        class="{% if product_style == 'card' %}invisible-1025 {% endif %}product__add-cart product-item__select-options transition btn btn-white shadow text-center w-45 h-45 w-1025-auto h-1025-auto inline-flex content-center relative absolute-1025 z-5 bottom-1025-15 left-1025-15 right-1025-15"
-                        aria-label="{{- 'products.product.actions.select_options.label' | t -}}"
-                      >
-                        <svg width="12" height="14" fill="none" class="block hidden-1025">
-                          <use href="#icon-cart" />
-                        </svg>
-                        <span class="hidden block-1025">
-                          {{- 'products.product.actions.select_options.label' | t -}}
-                        </span>
-                      </a>
-                    </noscript>
-                  {%- else -%}
-                    {% comment %} Case add cart directly {% endcomment %}
-                    <product-form class="product-item__product-form">
-                      {%- form 'product',
-                        card_product,
-                        id: product_form_id,
-                        class: 'form',
-                        novalidate: 'novalidate',
-                        data-type: 'add-to-cart-form'
-                      -%}
-                        <input
-                          type="hidden"
-                          name="id"
-                          value="{{ card_product.selected_or_first_available_variant.id }}"
-                          disabled
-                        >
-                        <button
-                          id="{{ product_form_id }}-submit"
-                          type="submit"
-                          name="add"
-                          class="{% if product_style == 'card' %}invisible-1025 {% endif %}product__add-cart product-item__button-submit transition btn btn-white shadow text-center w-45 h-45 w-1025-auto h-1025-auto inline-flex content-center relative absolute-1025 z-5 bottom-1025-15 left-1025-15 right-1025-15"
-                          aria-haspopup="dialog"
-                          aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                          aria-live="polite"
-                          arial-label="
-                            {%- if card_product.selected_or_first_available_variant.available -%}
-                              {{ 'products.product.actions.add_to_cart.default.label' | t }}
-
-                            {%- else -%}
-                              {{ 'products.product.actions.add_to_cart.sold_out.label' | t }}
-                            {%- endif -%}
-                          "
-                          data-sold-out-message="true"
-                          {% if card_product.selected_or_first_available_variant.available == false %}
-                            disabled
-                          {% endif %}
-                        >
-                          <svg width="12" height="14" fill="none" class="block hidden-1025 hidden-on-load icon-cart">
-                            <use href="#icon-cart" />
-                          </svg>
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="spin opacity-0 icon-load">
-                            <use href="#icon-load"></use>
-                          </svg>
-                          <span class="hidden block-1025 hidden-on-load btn-action">
-                            {%- if card_product.selected_or_first_available_variant.available -%}
-                              {{ 'products.product.actions.add_to_cart.default.label' | t }}
-
-                            {%- else -%}
-                              {{ 'products.product.actions.add_to_cart.sold_out.label' | t }}
-                            {%- endif -%}
-                          </span>
-                          <span class="sold-out-message hidden">
-                            {{ 'products.product.actions.add_to_cart.sold_out.label' | t }}
-                          </span>
-                        </button>
-                      {%- endform -%}
-                    </product-form>
-                  {%- endif -%}
-                {% endif %}
               {% endif %}
             {% endif %}
           </div>
@@ -495,22 +384,7 @@
             <div class="product-item__vendor dark-grey">{{ card_product.vendor }}</div>
           {%- endif -%}
         {% endif %}
-        {% comment %} Product item title {% endcomment %}
-        {% if type != 'product-set' %}
-          <a
-            aria-label="{{ card_product.title }}"
-            class="{% if product_truncation_title != 'none' %}product-title__truncate {% endif %}product-item__name {{ settings.product_name_text_transform }} heading-style no-underline fs-custom block lh-normal"
-            style="--font-size: {{ settings.product_size }};{% if product_truncation_title != 'none' %} --line-clamp: {{ product_truncation_title }};{% endif %}"            {% if template_disable_product_url == true %}
-              role="link" aria-disabled="true"
-            {% else %}
-              href="{{ card_product.url }}"
-            {% endif %}
-          >
-            {{- card_product.title -}}
-          </a>
-        {% endif %}
-        {% comment %} Product item rating {% endcomment %}
-
+        {% comment %} Product item rating (Moved above Title) {% endcomment %}
         {%- if template_enable_rate == true -%}
           {%- if show_rate -%}
             {%- if card_product.metafields.judgeme.badge -%}
@@ -523,7 +397,6 @@
                   {%- render 'review' | product: card_product -%}
                 </script>
               </review-product>
-<<<<<<< HEAD
             {%- else -%}
               {% comment %} Generate mock reviews randomly {% endcomment %}
               {% assign random_seed = card_product.id | slice: -2, 2 | plus: 0 %}
@@ -574,11 +447,23 @@
                 </div>
                 <span class="fs-12 text-grey" style="color: #888; font-size: 12px; margin-inline-start: 4px;">({{ rating_count }})</span>
               </div>
-=======
->>>>>>> 67ce3b32157217d415a148486ebd64ad3ef80bed
             {%- endif -%}
           {%- endif -%}
         {%- endif -%}
+        {% comment %} Product item title {% endcomment %}
+        {% if type != 'product-set' %}
+          <a
+            aria-label="{{ card_product.title }}"
+            class="{% if product_truncation_title != 'none' %}product-title__truncate {% endif %}product-item__name {{ settings.product_name_text_transform }} heading-style no-underline fs-custom block lh-normal"
+            style="--font-size: {{ settings.product_size }};{% if product_truncation_title != 'none' %} --line-clamp: {{ product_truncation_title }};{% endif %}"            {% if template_disable_product_url == true %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ card_product.url }}"
+            {% endif %}
+          >
+            {{- card_product.title -}}
+          </a>
+        {% endif %}
         {% comment %} Product item price {% endcomment %}
         {% if template_enable_price == true %}
           {% if hidden_price != true %}
