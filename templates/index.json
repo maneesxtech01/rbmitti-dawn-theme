@@ -454,7 +454,21 @@
             "link": ""
           }
         },
+        "instagram_manual_upload_XeRnb3": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/Clay_Plate.webp",
+            "link": ""
+          }
+        },
         "instagram_manual_upload_6QXC8q": {
+          "type": "instagram_manual_upload",
+          "settings": {
+            "image": "shopify://shop_images/02.png",
+            "link": ""
+          }
+        },
+        "instagram_manual_upload_mUDaHU": {
           "type": "instagram_manual_upload",
           "settings": {
             "image": "shopify://shop_images/02.png",
@@ -466,7 +480,9 @@
         "instagram_manual_upload_wWxXjU",
         "instagram_manual_upload_zPDzgd",
         "instagram_manual_upload_kTfVtT",
-        "instagram_manual_upload_6QXC8q"
+        "instagram_manual_upload_XeRnb3",
+        "instagram_manual_upload_6QXC8q",
+        "instagram_manual_upload_mUDaHU"
       ],
       "name": "t:sections.instagram.name",
       "settings": {
