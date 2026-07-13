@@ -430,121 +430,52 @@
         "reset_spacing": false
       }
     },
-    "instagram_shop_jtwaxQ": {
-      "type": "instagram-shop",
+    "instagram_kgAEYr": {
+      "type": "instagram",
       "blocks": {
-        "instagram_manual_upload_gPnTCz": {
+        "instagram_manual_upload_6CqDMf": {
           "type": "instagram_manual_upload",
           "settings": {
-            "image": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
-            "more_info": "",
-            "instagram_post_name": "",
-            "link": "",
-            "product__1": "5-piece-premium-wooden-kitchen-spoon-set",
-            "offset_top__1": 12,
-            "offset_left__1": 32,
-            "product__2": "",
-            "offset_top__2": 1,
-            "offset_left__2": 43,
-            "product__3": "",
-            "offset_top__3": 10,
-            "offset_left__3": 40,
-            "product__4": "",
-            "offset_top__4": 60,
-            "offset_left__4": 70,
-            "product__5": "",
-            "offset_top__5": 1,
-            "offset_left__5": 4
+            "link": ""
           }
         },
-        "instagram_manual_upload_XyNzYh": {
+        "instagram_manual_upload_MbkJqL": {
           "type": "instagram_manual_upload",
           "settings": {
-            "more_info": "",
-            "instagram_post_name": "",
-            "link": "",
-            "product__1": "",
-            "offset_top__1": 12,
-            "offset_left__1": 32,
-            "product__2": "",
-            "offset_top__2": 1,
-            "offset_left__2": 43,
-            "product__3": "",
-            "offset_top__3": 10,
-            "offset_left__3": 40,
-            "product__4": "",
-            "offset_top__4": 60,
-            "offset_left__4": 70,
-            "product__5": "",
-            "offset_top__5": 1,
-            "offset_left__5": 4
+            "link": ""
           }
         },
-        "instagram_manual_upload_39y8yU": {
+        "instagram_manual_upload_B3Pck3": {
           "type": "instagram_manual_upload",
           "settings": {
-            "more_info": "",
-            "instagram_post_name": "",
-            "link": "",
-            "product__1": "",
-            "offset_top__1": 12,
-            "offset_left__1": 32,
-            "product__2": "",
-            "offset_top__2": 1,
-            "offset_left__2": 43,
-            "product__3": "",
-            "offset_top__3": 10,
-            "offset_left__3": 40,
-            "product__4": "",
-            "offset_top__4": 60,
-            "offset_left__4": 70,
-            "product__5": "",
-            "offset_top__5": 1,
-            "offset_left__5": 4
+            "link": ""
           }
         },
-        "instagram_manual_upload_C3dABp": {
+        "instagram_manual_upload_97bcbh": {
           "type": "instagram_manual_upload",
           "settings": {
-            "more_info": "",
-            "instagram_post_name": "",
-            "link": "",
-            "product__1": "",
-            "offset_top__1": 12,
-            "offset_left__1": 32,
-            "product__2": "",
-            "offset_top__2": 1,
-            "offset_left__2": 43,
-            "product__3": "",
-            "offset_top__3": 10,
-            "offset_left__3": 40,
-            "product__4": "",
-            "offset_top__4": 60,
-            "offset_left__4": 70,
-            "product__5": "",
-            "offset_top__5": 1,
-            "offset_left__5": 4
+            "link": ""
           }
         }
       },
       "block_order": [
-        "instagram_manual_upload_gPnTCz",
-        "instagram_manual_upload_XyNzYh",
-        "instagram_manual_upload_39y8yU",
-        "instagram_manual_upload_C3dABp"
+        "instagram_manual_upload_6CqDMf",
+        "instagram_manual_upload_MbkJqL",
+        "instagram_manual_upload_B3Pck3",
+        "instagram_manual_upload_97bcbh"
       ],
-      "name": "t:sections.instagram-shop.name",
+      "name": "t:sections.instagram.name",
       "settings": {
         "section_width": "fluid_container",
         "color_scheme": "",
-        "heading": "Shop by Gram",
+        "heading": "Instagram",
         "description": "",
         "header_size": "medium",
         "header_alignment": "center",
         "image_ratio": "adapt",
         "custom_ratio": "",
-        "hotspot_style": "plus",
-        "items_per_row": 3,
+        "display_mode": "grid",
+        "items_per_row": 4,
         "column_gap": 30,
         "show_arrow": false,
         "carousel_pagination": "disable",
@@ -552,7 +483,8 @@
         "autoplay": false,
         "autorotate_speed": 5,
         "reveal": false,
-        "items_per_row_mobile": 2,
+        "carousel_on_mobile": false,
+        "items_per_row_mobile": 1,
         "padding_top": 0,
         "padding_bottom": 0,
         "reset_spacing": false
@@ -628,7 +560,7 @@
     "video_width_text_ovlerlay_YJPBFq",
     "product_bundle_ye7HDe",
     "product_testimonials_4yeNfR",
-    "instagram_shop_jtwaxQ",
+    "instagram_kgAEYr",
     "icon_box_xXxq8t"
   ]
 }
