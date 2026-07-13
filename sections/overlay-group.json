@@ -15,6 +15,7 @@
       "type": "before-you-leave",
       "settings": {
         "show_time": 82,
+        "banner": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
         "sub_heading": "",
         "content_heading": "Big Save <br>\n10% Coupon!",
         "description": "<p>Enter the code below at checkout to get <br/>10% off your first order.</p>",
