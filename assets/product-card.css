@@ -688,9 +688,9 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
 
 /* Custom Add to Cart Button Style */
 .product-item__wrapper.product-grid .product__add-cart {
-  background-color: var(--btn-bg, #ffffff) !important;
-  color: var(--btn-color, #000000) !important;
-  border: 2px solid var(--btn-border-color, #000000) !important;
+  background-color: var(--color-white) !important;
+  color: var(--btn-outline-color) !important;
+  border: 2px solid var(--btn-outline-border-color) !important;
   border-radius: 999px !important; /* Pill shape */
   font-weight: 600 !important;
   padding: 12px 24px !important;
@@ -708,9 +708,9 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
 }
 
 .product-item__wrapper.product-grid .product__add-cart:hover {
-  background-color: var(--btn-color, #000000) !important;
-  color: var(--btn-bg, #ffffff) !important;
-  border-color: var(--btn-color, #000000) !important;
+  background-color: var(--btn-primary-hover-bg-color) !important;
+  color: var(--btn-primary-hover-color) !important;
+  border-color: var(--btn-primary-hover-bg-color) !important;
 }
 
 /* Force full width stretch for forms and buttons in flex card */
