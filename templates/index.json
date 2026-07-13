@@ -290,7 +290,7 @@
         "content_alignment_mobile": "left",
         "padding_top": 0,
         "padding_bottom": 0,
-        "reset_spacing": true
+        "reset_spacing": false
       }
     },
     "product_bundle_ye7HDe": {
@@ -299,12 +299,12 @@
         "product_discount_36gX8L": {
           "type": "product_discount",
           "settings": {
-            "collection": "",
+            "collection": "frontpage",
             "products": [],
             "items_to_show": 6,
-            "items_per_row": 3,
+            "items_per_row": 2,
             "column_gap": 30,
-            "carousel_on_mobile": false,
+            "carousel_on_mobile": true,
             "items_per_row_mobile": 1
           }
         },
