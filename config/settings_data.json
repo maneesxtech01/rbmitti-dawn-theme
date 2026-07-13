@@ -161,7 +161,25 @@
           "show_fake_order": true,
           "disable_mobile": false,
           "fake_product": [
-            "handcrafted-clay-terracotta-dinnerware-set"
+            "5-piece-premium-wooden-kitchen-spoon-set",
+            "5l-clay-water-cooler-matka-with-tap",
+            "clay-handi-bowl-with-lid",
+            "clay-kulhad-chai-cup",
+            "kids-clay-toy-set",
+            "handmade-clay-handi-bowl-1",
+            "large-clay-water-cooler-with-tap-12-15l",
+            "handmade-clay-handi-bowl",
+            "marble-mortar-pestle-set-stone-spice-grinder",
+            "premium-10l-clay-water-cooler-handcrafted-matka",
+            "premium-clay-tea-cup-set-6-pieces",
+            "premium-clay-drink-set",
+            "premium-clay-water-dispenser-matka",
+            "premium-clay-water-glass-set-6-pieces",
+            "premium-marble-mortar-pestle",
+            "premium-wooden-spatula-set-3-pieces",
+            "small-handcrafted-terracotta-serving-bowl-natural-clay-bowl",
+            "traditional-hand-painted-clay-serving-bowl",
+            "wooden-chakla-belan-set-rolling-pin-board"
           ],
           "fake_user": "Jonson (California) | Tony (Texas) | Bruno (New York) | Eren (Ohio) | Lauren (Washington) | Flortino (California) | Blue (Ohio)",
           "text_verify": "Verify",
@@ -325,14 +343,14 @@
       },
       "scheme-e2434dd4-80ca-43a1-909b-8a9f7b57a7ab": {
         "settings": {
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "background_gradient": "",
           "primary_color": "#000000",
           "text_color": "#000000",
           "heading_color": "#000000",
-          "border_color": "#FFFFFF",
+          "border_color": "#ffffff",
           "btn_primary_color": "#000000",
-          "btn_primary_background": "#B65B2B",
+          "btn_primary_background": "#b65b2b",
           "btn_primary_gradient": "",
           "btn_primary_hover_color": "#ffffff",
           "btn_primary_hover_background": "#46200f",
@@ -341,7 +359,7 @@
           "btn_outline_border_color": "#111111",
           "button_link_color": "#111111",
           "button_link_hover_color": "#111111",
-          "rating_star_color": "#B65B2B"
+          "rating_star_color": "#b65b2b"
         }
       }
     }
