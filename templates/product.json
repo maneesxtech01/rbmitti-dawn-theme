@@ -153,7 +153,6 @@
           "type": "trust_badge",
           "settings": {
             "message": "Guarantee Safe Checkout:",
-            "trust_badge_image": "shopify://shop_images/payment.png",
             "image_width": 340
           }
         },
@@ -368,7 +367,7 @@
         "header_size": "medium",
         "header_alignment": "center",
         "items_to_show": 8,
-        "items_per_row": 4,
+        "items_per_row": 3,
         "column_gap": 30,
         "show_arrow": true,
         "carousel_pagination": "show_dots_on_mobile",

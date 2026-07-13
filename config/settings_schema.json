@@ -563,6 +563,12 @@
             "id": "button_link_hover_color",
             "label": "t:settings_schema.colors.settings.hover_color.label",
             "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "rating_star_color",
+            "label": "Rating Star Color",
+            "default": "#ffb800"
           }
         ],
         "role": {

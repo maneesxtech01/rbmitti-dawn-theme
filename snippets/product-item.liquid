@@ -421,20 +421,20 @@
               {% assign rating_count = random_seed | plus: 8 %}
 
               <div class="product-item__reviews-mock flex justify-content-center align-center gap-5 mt-5" style="justify-content: center; width: 100%;">
-                <div class="flex gap-2 text-yellow-500 rating-stars" style="color: #ffb800; display: inline-flex;">
+                <div class="flex gap-2 text-yellow-500 rating-stars" style="color: {{ settings.rating_star_color | default: '#ffb800' }}; display: inline-flex;">
                   {% for i in (1..5) %}
                     {% assign diff = rating_stars | minus: i %}
                     {% if diff >= 0 %}
                       {% comment %} Filled star {% endcomment %}
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
                         <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192z"/>
                       </svg>
                     {% elsif diff == -0.5 %}
                       {% comment %} Half star {% endcomment %}
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="display: block;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: block;">
                         <defs>
                           <linearGradient id="halfStarGrad-item-{{ card_product.id }}">
-                            <stop offset="50%" stop-color="#ffb800"/>
+                            <stop offset="50%" stop-color="{{ settings.rating_star_color | default: '#ffb800' }}"/>
                             <stop offset="50%" stop-color="#ddd" stop-opacity="1"/>
                           </linearGradient>
                         </defs>
@@ -442,7 +442,7 @@
                       </svg>
                     {% else %}
                       {% comment %} Empty star {% endcomment %}
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="#ddd" style="display: block;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#ddd" style="display: block;">
                         <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192z"/>
                       </svg>
                     {% endif %}

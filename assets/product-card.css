@@ -654,18 +654,19 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   background: #ffffff !important;
   border: 1px solid #f0f0f0 !important;
   border-radius: 20px !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
   padding: 18px !important;
   transition: box-shadow 0.3s ease !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100% !important;
+  min-height: 420px !important;
   flex: 1 !important;
 }
 
 .product-item__wrapper.product-grid:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px !important;
 }
 
 /* Ensure inner media is rounded and has no extra border */
