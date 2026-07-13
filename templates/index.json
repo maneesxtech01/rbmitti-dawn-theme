@@ -334,6 +334,56 @@
         "padding_bottom": 0,
         "reset_spacing": false
       }
+    },
+    "product_bundle_NdxNUK": {
+      "type": "product-bundle",
+      "blocks": {
+        "product_discount_NkNVVX": {
+          "type": "product_discount",
+          "settings": {
+            "collection": "frontpage",
+            "products": [],
+            "items_to_show": 6,
+            "items_per_row": 3,
+            "column_gap": 30,
+            "carousel_on_mobile": true,
+            "items_per_row_mobile": 1
+          }
+        },
+        "your_bundle_8kNrnp": {
+          "type": "your_bundle",
+          "settings": {
+            "heading": "Bundle Contents",
+            "description": "<p>Add at <strong>least 3</strong> products and <strong>Save 30%.</strong></p>",
+            "heading_font_size": 24,
+            "heading_font_weight": "heading_weight",
+            "heading_uppercase": false,
+            "heading_spacing_bottom": 20,
+            "des_font_size": 15,
+            "des_font_weight": "body_weight",
+            "des_spacing_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "product_discount_NkNVVX",
+        "your_bundle_8kNrnp"
+      ],
+      "name": "t:sections.product-bundle.name",
+      "settings": {
+        "section_width": "fluid_container",
+        "color_scheme": "",
+        "heading": "",
+        "description": "",
+        "header_size": "medium",
+        "header_alignment": "left",
+        "minimum": 2,
+        "maximum": 3,
+        "enable_quantity": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
     }
   },
   "order": [
@@ -341,6 +391,7 @@
     "collection_list_xmGiTx",
     "collection_tab_b8n8RW",
     "products_carousel_pqLbWj",
-    "video_width_text_ovlerlay_yizzVH"
+    "video_width_text_ovlerlay_yizzVH",
+    "product_bundle_NdxNUK"
   ]
 }
