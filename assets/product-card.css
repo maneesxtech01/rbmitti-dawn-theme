@@ -624,3 +624,80 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
     transform: scale(1) !important;
   }
 }
+
+/* Custom Premium Card Design for Grid Cards */
+.product-item__wrapper.product-grid {
+  background: #ffffff !important;
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  padding: 18px !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.product-item__wrapper.product-grid:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Ensure inner media is rounded and has no extra border */
+.product-item__wrapper.product-grid .product-item__media,
+.product-item__wrapper.product-grid .product-item__media img,
+.product-item__wrapper.product-grid .product-item__media--ratio {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+/* Center ratings stars and titles */
+.product-item__wrapper.product-grid .product-item__reviews-mock {
+  justify-content: center !important;
+  display: flex !important;
+  width: 100% !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Custom Add to Cart Button Style */
+.product-item__wrapper.product-grid .product__add-cart {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 999px !important; /* Pill shape */
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  margin-top: 15px !important;
+  min-height: auto !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.product-item__wrapper.product-grid .product__add-cart:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+/* Adjust card inner margins */
+.product-item__wrapper.product-grid .product-item__inner {
+  background: transparent !important;
+  margin-bottom: 12px !important;
+}
+
+.product-item__wrapper.product-grid .product-item__information {
+  margin-top: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
