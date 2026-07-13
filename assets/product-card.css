@@ -721,9 +721,7 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
 
 /* Reduce grid card spacing/gap */
 .grid,
-.product-grid,
-.swiper-container,
-.swiper-wrapper {
+.product-grid:not(.swiper-wrapper) {
   --grid-desktop-horizontal-spacing: 15px !important;
   --grid-desktop-vertical-spacing: 15px !important;
   gap: 15px !important;
