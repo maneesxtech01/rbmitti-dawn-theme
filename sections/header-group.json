@@ -28,7 +28,7 @@
           "type": "cur_lang",
           "settings": {
             "menu_link": "",
-            "show_currency": false,
+            "show_currency": true,
             "show_language": false,
             "show_our_store": false,
             "hidden_on_mobile": true
@@ -136,7 +136,7 @@
         "color_scheme": "",
         "logo_position": "left",
         "separator_line": "homepage",
-        "enable_login_popup": true,
+        "enable_login_popup": false,
         "sticky_header_type": "on-scroll-up",
         "sticky_header_mobile": true,
         "transparent_header": false,
@@ -174,7 +174,7 @@
         "show_account_icon": true,
         "show_wishlist_icon": true,
         "show_shopping_cart": true,
-        "show_currency": true,
+        "show_currency": false,
         "show_language": false,
         "show_recently_viewed": false,
         "padding_top": 10,
