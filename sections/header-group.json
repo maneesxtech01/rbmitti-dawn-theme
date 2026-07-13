@@ -17,9 +17,9 @@
         "text_slider_LFaC38": {
           "type": "text_slider",
           "settings": {
-            "text1": "",
-            "text2": "Summer sale discount off 50%. <a href=\"/collections/activewear\" title=\"Activewear\"><strong>Shop Sale</strong></a>",
-            "text3": "Coats—every friday 75% Off . <a href=\"/collections/blazers\" title=\"Blazers\"><strong>Shop Sale</strong></a>",
+            "text1": "🚚 Free Shipping Across Pakistan on Orders Over Rs. 3,999",
+            "text2": "🏺 100% Handmade Clay Products | Crafted with Tradition",
+            "text3": "",
             "change_every": 3,
             "hidden_on_mobile": false
           }
