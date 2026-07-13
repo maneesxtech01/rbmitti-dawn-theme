@@ -610,19 +610,43 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   --btn-bg-gradient: var(--btn-primary-hover-bg-color-graident);
 }
 
-/* Custom Wishlist Hover Effect */
+/* Custom Wishlist Hover Effect and Positioning */
 @media (min-width: 1025px) {
   .product-item__wrapper.product-grid .product-item__inner .product-item__action {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    left: auto !important;
+    bottom: auto !important;
+    z-index: 99 !important;
     opacity: 0 !important;
     visibility: hidden !important;
+    transform: scale(0.8) !important;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease !important;
-    transform: scale(0.9) !important;
+    display: flex !important;
   }
+
   .product-item__wrapper.product-grid:hover .product-item__inner .product-item__action {
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1) !important;
   }
+
+  .product-item__wrapper.product-grid .product-item__inner .product-item__button-action {
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
+
+/* Equal Height Flexbox Setup for Cards */
+.product-item {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
 }
 
 /* Custom Premium Card Design for Grid Cards */
@@ -632,16 +656,16 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   border-radius: 20px !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
   padding: 18px !important;
-  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  transition: box-shadow 0.3s ease !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100% !important;
+  flex: 1 !important;
 }
 
 .product-item__wrapper.product-grid:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
-  transform: translateY(-4px) !important;
 }
 
 /* Ensure inner media is rounded and has no extra border */
@@ -688,6 +712,23 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   border-color: #000000 !important;
 }
 
+/* Force full width stretch for forms and buttons in flex card */
+.product-item__wrapper.product-grid :is(product-form, select-option, .product-item__product-form, product-form-bundle, noscript) {
+  width: 100% !important;
+  align-self: stretch !important;
+  display: block !important;
+}
+
+/* Reduce grid card spacing/gap */
+.grid,
+.product-grid,
+.swiper-container,
+.swiper-wrapper {
+  --grid-desktop-horizontal-spacing: 15px !important;
+  --grid-desktop-vertical-spacing: 15px !important;
+  gap: 15px !important;
+}
+
 /* Adjust card inner margins */
 .product-item__wrapper.product-grid .product-item__inner {
   background: transparent !important;
@@ -700,4 +741,6 @@ variant-radios-bundle .option-swatch-js.active .product__item-option {
   flex-direction: column !important;
   align-items: center !important;
   text-align: center !important;
+  flex: 1 !important;
+  justify-content: space-between !important;
 }
