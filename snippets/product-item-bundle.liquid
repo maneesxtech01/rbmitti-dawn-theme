@@ -36,6 +36,7 @@
     assign product_style = theme_st.product_style
     assign show_quick_view = theme_st.show_quick_view
     assign show_wishlist = true
+    assign template_enable_action = true
     assign show_compare = theme_st.show_compare
     assign show_vendor = theme_st.show_vendor
     assign show_short_description = theme_st.show_short_description
@@ -361,6 +362,7 @@
                 <review-product
                   class="review-product-added inline-loading inline-flex"
                   data-product-handle="{{ card_product.handle }}"
+                  style="justify-content: center; width: 100%;"
                 >
                   {% comment %} {{- 'products.product.loading' | t -}} {% endcomment %}
                   <script type="application/json" class="product-review-json">
@@ -387,7 +389,7 @@
                 {% comment %} Determine count: between 8 and 108 {% endcomment %}
                 {% assign rating_count = random_seed | plus: 8 %}
 
-                <div class="product-item__reviews-mock flex align-center gap-5 mt-5">
+                <div class="product-item__reviews-mock flex justify-content-center align-center gap-5 mt-5" style="justify-content: center; width: 100%;">
                   <div class="flex gap-2 text-yellow-500 rating-stars" style="color: #ffb800; display: inline-flex;">
                     {% for i in (1..5) %}
                       {% assign diff = rating_stars | minus: i %}
