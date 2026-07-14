@@ -1,0 +1,355 @@
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign section_st = section.settings
+  assign section_width = section_st.section_width
+  assign color_scheme = section_st.color_scheme
+  assign autoplay_speed = section_st.autoplay_speed | default: 3 | times: 1000
+-%}
+
+{%- style -%}
+  #custombar-{{ section.id }} {
+    background-color: {{ section_st.bg_color | default: '#000000' }};
+    color: {{ section_st.text_color | default: '#ffffff' }};
+    padding-top: {{ section_st.padding_top }}px;
+    padding-bottom: {{ section_st.padding_bottom }}px;
+    font-size: {{ section_st.font_size }}px;
+  }
+  
+  #custombar-{{ section.id }} a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .custombar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    gap: 15px;
+  }
+
+  .custombar-left-side {
+    flex: 1 1 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .custombar-center-slider {
+    flex: 1 1 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .custombar-right-side {
+    flex: 1 1 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95em;
+  }
+
+  /* Slider and Arrows Container */
+  .custombar-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding-left: 60px; /* Space for the start-arrows */
+  }
+
+  /* Arrows at the start (left side) of the text */
+  .custombar-arrows {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  .custombar-arrow {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .custombar-arrow:hover {
+    opacity: 1;
+  }
+
+  .custombar-arrow svg {
+    stroke: currentColor;
+    fill: none;
+  }
+
+  /* Text Slider */
+  .custombar-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .custombar-swiper-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .custombar-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .custombar-message {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @media (max-width: 1024px) {
+    .custombar-left-side,
+    .custombar-right-side {
+      display: none;
+    }
+    .custombar-center-slider {
+      flex: 1 1 100%;
+    }
+  }
+{%- endstyle -%}
+
+<div id="custombar-{{ section.id }}" class="custom-announcement-bar remove_spacing">
+  <div class="{{ section_width }}">
+    <div class="custombar-inner">
+      
+      <!-- Left side (Socials or phone info) -->
+      <div class="custombar-left-side">
+        {%- if section_st.left_text != blank -%}
+          <span>{{ section_st.left_text }}</span>
+        {%- endif -%}
+      </div>
+
+      <!-- Center Auto-Changing Slider -->
+      <div class="custombar-center-slider">
+        <div class="custombar-slider-container">
+          
+          <!-- Arrows at the start -->
+          <div class="custombar-arrows">
+            <div class="custombar-arrow custombar-prev" aria-label="Previous slide">
+              <svg width="6" height="11" viewBox="0 0 6 11" stroke-width="2">
+                <path d="M5 1L1 5.5L5 10"/>
+              </svg>
+            </div>
+            <div class="custombar-arrow custombar-next" aria-label="Next slide">
+              <svg width="6" height="11" viewBox="0 0 6 11" stroke-width="2">
+                <path d="M1 1L5 5.5L1 10"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Swiper element wrapper -->
+          <slide-section
+            class="swiper custombar-swiper"
+            data-section-id="{{ section.id }}"
+            data-autoplay="true"
+            data-autoplaySpeed="{{ section_st.autoplay_speed }}"
+            data-loop="true"
+            data-mobile="1"
+            data-tablet="1"
+            data-desktop="1"
+            data-direction="horizontal"
+            data-spacing="0"
+          >
+            <div class="swiper-wrapper custombar-swiper-wrapper">
+              {%- for block in section.blocks -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="swiper-slide custombar-slide">
+                    <span class="custombar-message">{{ block.settings.text }}</span>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </slide-section>
+
+        </div>
+      </div>
+
+      <!-- Right side (Language/Currency or Link List) -->
+      <div class="custombar-right-side">
+        {%- if section_st.right_text != blank -%}
+          <span>{{ section_st.right_text }}</span>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionId = '{{ section.id }}';
+    const container = document.getElementById('custombar-' + sectionId);
+    if (!container) return;
+
+    // Wait for slide-section swiper element to initialize
+    const slideSection = container.querySelector('slide-section');
+    if (slideSection) {
+      const prevBtn = container.querySelector('.custombar-prev');
+      const nextBtn = container.querySelector('.custombar-next');
+      
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          const swiperInstance = slideSection.swiper;
+          if (swiperInstance) swiperInstance.slidePrev();
+        });
+        nextBtn.addEventListener('click', function() {
+          const swiperInstance = slideSection.swiper;
+          if (swiperInstance) swiperInstance.slideNext();
+        });
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "class": "section-custom-announcement-bar",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "fluid_container",
+          "label": "Fluid Container"
+        },
+        {
+          "value": "full_width",
+          "label": "Full Width"
+        }
+      ],
+      "default": "full_width",
+      "label": "Section Width"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "s",
+      "label": "Change every",
+      "default": 4
+    },
+    {
+      "type": "inline_richtext",
+      "id": "left_text",
+      "label": "Left Text (Desktop Only)",
+      "default": "Call us: +123 456 789"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "right_text",
+      "label": "Right Text (Desktop Only)",
+      "default": "Free Returns 30-Days"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "blocks": [
+        {
+          "type": "announcement",
+          "settings": {
+            "text": "🚚 Free Shipping Across Pakistan on Orders Over Rs. 3,999"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "text": "✨ 100% Handcrafted Tradition Delivered Right to Your Doorstep"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
