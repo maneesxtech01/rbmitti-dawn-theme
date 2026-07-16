@@ -11,179 +11,78 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "top_bar_CbXNYj": {
-      "type": "top-bar",
+    "custom_announcement_bar_EpkYGG": {
+      "type": "custom-announcement-bar",
       "blocks": {
-        "text_slider_LFaC38": {
-          "type": "text_slider",
+        "announcement_rgJFLY": {
+          "type": "announcement",
           "settings": {
-            "text1": "Sign up for 10% off your first order. <a href=\"/account/\" title=\"/account/\"><strong>Sign Up</strong></a>",
-            "text2": "Summer sale discount off 50%. <a href=\"/collections/activewear\" title=\"Activewear\"><strong>Shop Sale</strong></a>",
-            "text3": "Coats—every friday 75% Off . <a href=\"/collections/blazers\" title=\"Blazers\"><strong>Shop Sale</strong></a>",
-            "change_every": 3,
-            "hidden_on_mobile": false
+            "text": "Made in USA",
+            "icon": "check",
+            "custom_icon_class": ""
           }
         },
-        "cur_lang_aPwfT9": {
-          "type": "cur_lang",
+        "announcement_GjjMLw": {
+          "type": "announcement",
           "settings": {
-            "menu_link": "",
-            "show_currency": true,
-            "show_language": false,
-            "show_our_store": false,
-            "hidden_on_mobile": true
+            "text": "50% discount for new subscribers",
+            "icon": "circle",
+            "custom_icon_class": ""
+          }
+        },
+        "announcement_7EmFmN": {
+          "type": "announcement",
+          "settings": {
+            "text": "30-Day Money-Back Guarantee",
+            "icon": "guarantee",
+            "custom_icon_class": ""
+          }
+        },
+        "announcement_mQPRYW": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free + Fast Shipping within the US only",
+            "icon": "truck",
+            "custom_icon_class": ""
           }
         }
       },
       "block_order": [
-        "text_slider_LFaC38",
-        "cur_lang_aPwfT9"
+        "announcement_rgJFLY",
+        "announcement_GjjMLw",
+        "announcement_7EmFmN",
+        "announcement_mQPRYW"
       ],
+      "name": "Announcement Bar",
       "settings": {
-        "section_width": "stretch_width",
-        "color_scheme": "scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9",
-        "show_mobile": true,
-        "show_separator_line": false,
-        "uppercase": false,
-        "font_size": 13,
-        "font_weight": "body_weight",
-        "padding_top": 10,
-        "padding_bottom": 10
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "announcement_bg": "#f15a24",
+        "announcement_text_color": "#ffffff"
       }
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "menu_promotion_EeqGGC": {
-          "type": "menu_promotion",
-          "settings": {
-            "text": "Home",
-            "open-link-newtab": true,
-            "item_label": "unset",
-            "promotion_menu_column": 2,
-            "mega_custom_width": 860,
-            "center_submenu": true,
-            "full_width": false,
-            "promotion_position": "right",
-            "promotion_image_width": 41,
-            "promotion_link_1": "https://themeforest.net/item/glozin-multipurpose-shopify-theme-os-20/53006461?s_rank=1",
-            "promotion_link_newtab_1": true,
-            "promotion_link_2": "",
-            "promotion_link_newtab_2": true
-          }
-        },
-        "menu_promotion_xJdpmk": {
-          "type": "menu_promotion",
-          "settings": {
-            "text": "Sale",
-            "open-link-newtab": true,
-            "item_label": "hot",
-            "promotion_menu_column": 4,
-            "mega_custom_width": 1030,
-            "center_submenu": true,
-            "full_width": true,
-            "promotion_position": "right",
-            "promotion_image_width": 27,
-            "promotion_link_1": "",
-            "promotion_link_newtab_1": true,
-            "promotion_link_2": "",
-            "promotion_link_newtab_2": true
-          }
-        },
-        "menu_collection_EkdGyG": {
-          "type": "menu_collection",
-          "settings": {
-            "text": "Shop",
-            "open-link-newtab": true,
-            "item_label": "unset",
-            "collection_menu_column": 2,
-            "mega_custom_width": 1030,
-            "center_submenu": true,
-            "full_width": false,
-            "collection_width": 52,
-            "collection_1": "sweaters",
-            "collection_2": "handbags",
-            "collection_3": ""
-          }
-        },
-        "menu_promotion_rWzQL6": {
-          "type": "menu_promotion",
-          "settings": {
-            "text": "Products",
-            "open-link-newtab": true,
-            "item_label": "unset",
-            "promotion_menu_column": 4,
-            "mega_custom_width": 1030,
-            "center_submenu": true,
-            "full_width": true,
-            "promotion_position": "right",
-            "promotion_image_width": 34,
-            "promotion_link_1": "shopify://collections/activewear",
-            "promotion_link_newtab_1": true,
-            "promotion_link_2": "",
-            "promotion_link_newtab_2": true
-          }
-        }
-      },
-      "block_order": [
-        "menu_promotion_EeqGGC",
-        "menu_promotion_xJdpmk",
-        "menu_collection_EkdGyG",
-        "menu_promotion_rWzQL6"
-      ],
       "settings": {
-        "section_width": "fluid_container",
-        "color_scheme": "",
-        "logo_position": "left",
-        "separator_line": "homepage",
-        "enable_login_popup": true,
+        "logo_position": "top-center",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "sticky_header_mobile": true,
-        "transparent_header": false,
-        "transparent_mobile": false,
-        "transparent_text_icon_color": "#ffffff",
-        "mega_menu": "main-menu",
-        "dropdowns_animation": "down-to-up",
-        "uppercase_first": false,
-        "hot": "Hot",
-        "label_color_hot": "#ffffff",
-        "label_background_hot": "#b65b2b",
-        "new": "New",
-        "label_color_new": "#ffffff",
-        "label_background_new": "#b65b2b",
-        "sale": "Sale",
-        "label_color_sale": "#ffffff",
-        "label_background_sale": "#b65b2b",
-        "popular": "Popular",
-        "label_color_popular": "#ffffff",
-        "label_background_popular": "#b65b2b",
-        "redirect_to_link": false,
-        "menu_tab": "custom-collections",
-        "collection_list": [
-          "frontpage",
-          "dinner-sets",
-          "cookware",
-          "drinkware",
-          "marble-tools",
-          "wooden-collection",
-          "kids-collection"
-        ],
-        "menu_mobile_color": "#ffffff",
-        "menu_mobile_background": "#b65b2b",
-        "show_search": true,
-        "show_account_icon": true,
-        "show_wishlist_icon": true,
-        "show_shopping_cart": true,
-        "show_currency": true,
-        "show_language": false,
-        "show_recently_viewed": false,
-        "padding_top": 10,
-        "padding_bottom": 10
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
-    "top_bar_CbXNYj",
+    "custom_announcement_bar_EpkYGG",
     "header"
   ]
 }

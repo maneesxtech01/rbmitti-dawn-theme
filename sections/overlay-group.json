@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.overlay_group.name",
   "type": "custom.overlay",
@@ -6,6 +15,7 @@
       "type": "before-you-leave",
       "settings": {
         "show_time": 82,
+        "banner": "shopify://shop_images/Serving_Bowl_Natural_Clay.webp",
         "sub_heading": "",
         "content_heading": "Big Save <br>\n10% Coupon!",
         "description": "<p>Enter the code below at checkout to get <br/>10% off your first order.</p>",
